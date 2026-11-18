@@ -23,19 +23,6 @@ if (chapters.length) {
   }, {passive:true});
 }
 
-const pocketIndex = document.querySelector(".pocket-toc");
-if (pocketIndex) {
-  pocketIndex.addEventListener("click", event => {
-    const link = event.target.closest("a[href^='#']");
-    if (link) {
-      pocketIndex.open = false;
-      const target = document.querySelector(link.hash);
-      target.setAttribute("tabindex", "-1");
-      target.focus({preventScroll:true});
-    }
-  });
-}
-
 // 正文先显示随 HTML 到达的预览图，接近视口时再换成清晰图。
 const galleries = document.querySelectorAll('[data-gallery]');
 const compactScreen = window.matchMedia('(max-width: 700px)');
