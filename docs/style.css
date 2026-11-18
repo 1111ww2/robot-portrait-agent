@@ -284,7 +284,18 @@
 }
 @media (min-width:701px) {
   .manual .chapter .tiles { width:86%; max-width:760px; margin-inline:auto; }
+  /* 方形取景保留前四帧的上方关节，后四帧兼顾底座与取片界面。 */
+  .field-study .field-timeline img { aspect-ratio:1; object-fit:cover; object-position:center top; }
+  .field-timeline figure:nth-child(n+5) img { object-position:center 55%; }
 
+  /* 文档各章节共用同一字号层级，表格、参数和测试项与正文同级。 */
+  .manual { --doc-body:14px; --doc-caption:12px; font-size:var(--doc-body); }
+  .manual .chapter :is(p,table,dt,dd,li,code,.technical-aside) { font-size:var(--doc-body); }
+  .manual .chapter h2 { font-size:28px; line-height:1.3; }
+  .manual .chapter :is(h3,.topic-title) { font-size:20px; line-height:1.4; }
+  .manual .chapter .system-heading { font-size:22px; }
+  .manual .chapter h4 { font-size:17px; line-height:1.45; }
+  .manual :is(.folio,figcaption,.source,.source a,.manual-head>span) { font-size:var(--doc-caption); }
 }
 @media (min-width:961px) {
   /* 实测分为独立试拍、故障复核两段；图像与观察共用第一段。 */
