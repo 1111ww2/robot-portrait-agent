@@ -1,0 +1,15 @@
+services:
+  ursim:
+    image: universalrobots/ursim_e-series:5.26.0
+    platform: linux/amd64
+    environment:
+      ROBOT_MODEL: UR5
+    ports:
+      - "127.0.0.1:6080:6080"
+      - "127.0.0.1:29999:29999"
+      - "127.0.0.1:30001-30004:30001-30004"
+    volumes:
+      - ursim-programs:/ursim/programs
+
+volumes:
+  ursim-programs:

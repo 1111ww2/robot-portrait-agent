@@ -1,0 +1,45 @@
+[project]
+name = "leica-vision-mvp"
+version = "0.2.0"
+description = "Continuous Pocket 3 upper-body tracker for the DECO2021 Leica robotic-frame prototype"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "mediapipe==0.10.21",
+  "numpy==1.26.4",
+  "opencv-contrib-python==4.11.0.86",
+]
+
+[project.scripts]
+leica-tracker = "leica_tracker.app:main"
+
+[project.optional-dependencies]
+handoff = [
+  "faster-whisper==1.2.1",
+    "cryptography>=50.0.2",
+    "qrcode==8.2",
+]
+robot = [
+    "ur-rtde==1.6.5",
+]
+legacy-urx = [
+    "urx==0.11.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/leica_tracker"]
+
+[dependency-groups]
+dev = ["pytest>=8.3,<10"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.uv.sources]
+urx = { git = "https://github.com/SintefManufacturing/python-urx.git", rev = "3a64a4cb508b34243785839993f8478c6d2e64b4" }

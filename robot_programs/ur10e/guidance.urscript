@@ -1,0 +1,307 @@
+# SIMULATION_ONLY：仅供仿真。
+# 使用官方 URSim 实测验证，通过 RTDE session1 检查。
+def leica_resident_xyz():
+  def in_box(p):
+    return p[0] >= -0.3156315369 and p[0] <= -0.0636315369 and p[1] >= -0.6756838817 and p[1] <= -0.5436838817 and p[2] >= 0.1699711487 and p[2] <= 0.3519711487
+  end
+  def smaller(a, b):
+    if a < b:
+      return a
+    end
+    return b
+  end
+  def larger(a, b):
+    if a > b:
+      return a
+    end
+    return b
+  end
+  global gesture_age = 0.0
+  global gesture_scale = 1.0
+  global gesture_active = False
+  global recovery_stop_done = True
+  global packet_age = 1.0
+  global startup_age = 0.0
+  thread heartbeat_clock():
+    while True:
+      global packet_age = packet_age + get_steptime()
+      if gesture_active:
+        global gesture_age = gesture_age + get_steptime()*gesture_scale
+      end
+      global startup_age = startup_age + get_steptime()
+      sync()
+    end
+  end
+  thread recovery_brake():
+    stopl(1.0005549365)
+    global recovery_stop_done = True
+  end
+  clock_thread = run heartbeat_clock()
+  neutral = p[-0.1896315369,-0.6096838817,0.2609711487,-0.0012213597,3.1162765285,0.0388919156]
+  expected_tcp = p[0.0000000000,0.0000000000,0.0000000000,0.0000000000,0.0000000000,0.0000000000]
+  lower = [-0.3156315369,-0.6756838817,0.1699711487]
+  upper = [-0.0636315369,-0.5436838817,0.3519711487]
+  boundary_margin = [0.0030000000,0.0030000000,0.0030000000]
+  previous = 0
+  consumed = 0
+  armed = False
+  enabled = False
+  moving = False
+  target = get_actual_tcp_pose()
+  gesture_mode = False
+  gesture_endpoint = neutral
+  recovery_paused = False
+  ever_armed = False
+  write_output_integer_register(42, 2)
+  write_output_integer_register(43, 0)
+  write_output_integer_register(40, 1)
+  while True:
+    if packet_age > 0.25:
+      armed = False
+      enabled = False
+      if ever_armed:
+        if not recovery_stop_done:
+          kill recovery_brake_thread
+          stopl(1.0005549365)
+        end
+        if moving:
+          stopl(1.0005549365)
+        end
+        write_output_integer_register(42, 2)
+        break
+      end
+    end
+    if not ever_armed and startup_age > 3.0:
+      armed = False
+      enabled = False
+      stopl(1.0005549365)
+      write_output_integer_register(42, 2)
+      break
+    end
+    seq = read_input_integer_register(42)
+    flag = read_input_integer_register(43)
+    token = read_input_integer_register(44)
+    incoming = p[read_input_float_register(42),read_input_float_register(43),read_input_float_register(44),neutral[3],neutral[4],neutral[5]]
+    seq_again = read_input_integer_register(42)
+    if seq == seq_again and seq > previous:
+      if token == 1 and (flag == 0 or flag == 1 or flag == 2 or flag == 3) and in_box(incoming):
+        previous = seq
+        consumed = seq
+        global packet_age = 0.0
+        if flag == 3:
+          enabled = False
+          ever_armed = True
+          recovery_paused = True
+          global gesture_active = False
+        elif flag == 0:
+          armed = True
+          enabled = False
+          ever_armed = True
+          gesture_mode = False
+          global gesture_active = False
+          recovery_paused = not recovery_stop_done
+        elif armed and recovery_stop_done:
+          enabled = True
+          recovery_paused = False
+          if flag == 2:
+            if not gesture_mode:
+              gesture_mode = True
+              gesture_endpoint = incoming
+              global gesture_age = 0.0
+              global gesture_scale = 1.0
+              global gesture_active = True
+            elif norm([incoming[0]-gesture_endpoint[0],incoming[1]-gesture_endpoint[1],incoming[2]-gesture_endpoint[2]]) > 0.000001:
+              armed = False
+              enabled = False
+            else:
+              global gesture_active = gesture_age < 3.3000000000
+            end
+          else:
+            gesture_mode = False
+            global gesture_active = False
+            target = incoming
+          end
+        end
+      else:
+        armed = False
+        enabled = False
+      end
+    end
+    actual = get_actual_tcp_pose()
+    actual_speed = get_actual_tcp_speed()
+    q = get_actual_joint_positions()
+    qd = get_actual_joint_speeds()
+    offset = get_tcp_offset()
+    relative = pose_trans(pose_inv(neutral), actual)
+    fault = 0
+    if not in_box(actual):
+      fault = 1
+    elif not (norm([relative[3],relative[4],relative[5]]) < 0.0100000000):
+      fault = 3
+    elif norm([offset[0]-expected_tcp[0],offset[1]-expected_tcp[1],offset[2]-expected_tcp[2],offset[3]-expected_tcp[3],offset[4]-expected_tcp[4],offset[5]-expected_tcp[5]]) > 0.0001:
+      fault = 4
+    elif False:
+      fault = 5
+    elif False:
+      fault = 7
+    elif norm(qd[0]) > 0.8400000000:
+      fault = 8
+    end
+    i = 0
+    while i < 6:
+      if norm(qd[i]) > 0.7370000000:
+        fault = 9
+      end
+      i = i + 1
+    end
+    if fault != 0:
+      if not recovery_stop_done:
+        kill recovery_brake_thread
+      end
+      textmsg("LEICA_FAULT_XYZ_", fault)
+      stopl(1.0005549365)
+      write_output_integer_register(42, -fault)
+      break
+    end
+    state = 0
+    if not armed:
+      state = 2
+    end
+    if recovery_paused:
+      state = 4
+      if moving:
+        global recovery_stop_done = False
+        recovery_brake_thread = run recovery_brake()
+        moving = False
+      end
+    end
+    if enabled and armed:
+      feedforward = [0,0,0]
+      if gesture_mode:
+        phase_time = smaller(gesture_age,3.3000000000)
+        fraction = 0.5-0.5*cos(4.0000000000*3.141592653589793*phase_time/3.3000000000)
+        derivative = 2.0000000000*3.141592653589793/3.3000000000*sin(4.0000000000*3.141592653589793*phase_time/3.3000000000)
+        if gesture_age >= 3.3000000000:
+          fraction = 0.0
+          derivative = 0.0
+          global gesture_active = False
+        end
+        target = p[neutral[0]+(gesture_endpoint[0]-neutral[0])*fraction,neutral[1]+(gesture_endpoint[1]-neutral[1])*fraction,neutral[2]+(gesture_endpoint[2]-neutral[2])*fraction,neutral[3],neutral[4],neutral[5]]
+        feedforward = [(gesture_endpoint[0]-neutral[0])*derivative,(gesture_endpoint[1]-neutral[1])*derivative,(gesture_endpoint[2]-neutral[2])*derivative]
+      end
+      tracking_gain = 4.0
+      if gesture_mode:
+        tracking_gain = 8.0
+      end
+      v = [feedforward[0]+tracking_gain*(target[0]-actual[0]),feedforward[1]+tracking_gain*(target[1]-actual[1]),feedforward[2]+tracking_gain*(target[2]-actual[2])]
+      gesture_correcting = False
+      if gesture_mode:
+        i = 0
+        while i < 3:
+          if (v[i] < 0 and actual[i]-lower[i] <= boundary_margin[i] and target[i] > actual[i]) or (v[i] > 0 and upper[i]-actual[i] <= boundary_margin[i] and target[i] < actual[i]):
+            gesture_correcting = True
+          end
+          i = i+1
+        end
+        if gesture_correcting:
+          v = [tracking_gain*(target[0]-actual[0]),tracking_gain*(target[1]-actual[1]),tracking_gain*(target[2]-actual[2])]
+        end
+      end
+      i = 0
+      while i < 3:
+        if norm(target[i]-actual[i]) < 0.0002 and (not gesture_mode or not gesture_active):
+          v[i] = 0
+        end
+        i = i + 1
+      end
+      scale = smaller(1.0, 0.2627513856/larger(0.0000001,norm(v)))
+      v = [v[0]*scale,v[1]*scale,v[2]*scale]
+      if gesture_mode:
+        if gesture_correcting:
+          global gesture_scale = 0.0
+        else:
+          global gesture_scale = scale
+        end
+      end
+      scale = 1.0
+      i = 0
+      while i < 3:
+        distance = actual[i]-lower[i]
+        if v[i] > 0:
+          distance = upper[i]-actual[i]
+        end
+        if gesture_mode:
+          allowed = sqrt(2.0011098731*larger(0.0,distance-boundary_margin[i]))
+        else:
+          allowed = sqrt(0.122635997174+2.0011098731*larger(0.0,distance-boundary_margin[i]))-0.3501942278
+        end
+        if norm(v[i]) > 0.0000001:
+          scale = smaller(scale,allowed/norm(v[i]))
+        end
+        i = i + 1
+      end
+      v = [v[0]*scale,v[1]*scale,v[2]*scale]
+      if gesture_mode:
+        global gesture_scale = gesture_scale*scale
+      end
+      probe = p[actual[0]+v[0]*0.1,actual[1]+v[1]*0.1,actual[2]+v[2]*0.1,actual[3],actual[4],actual[5]]
+      probe_in_box = in_box(probe)
+      solution_valid = False
+      if probe_in_box:
+        known_pose = get_forward_kin(q, offset)
+        known_error = pose_trans(pose_inv(probe), known_pose)
+        if norm([known_error[0],known_error[1],known_error[2]]) <= 1e-10 and norm([known_error[3],known_error[4],known_error[5]]) <= 1e-10:
+          q_next = q
+          solution_valid = True
+        elif get_inverse_kin_has_solution(probe, q, tcp=offset):
+          q_next = get_inverse_kin(probe, q, tcp=offset)
+          solution_valid = True
+        end
+      end
+      if not probe_in_box or not solution_valid:
+        textmsg("LEICA_FAULT_XYZ_REACH", probe)
+        stopl(1.0005549365)
+        write_output_integer_register(42, -6)
+        break
+      end
+      scale = 1.0
+      i = 0
+      while i < 6:
+        rate = (q_next[i]-q[i])/0.1
+        scale = smaller(scale,0.7000000000/larger(0.0000001,norm(rate)))
+        i = i + 1
+      end
+      base_rate = (q_next[0]-q[0])/0.1
+      base_scale = smaller(1.0,0.7000000000/larger(0.0000001,norm(base_rate)))
+      scale = smaller(scale,base_scale)
+      v = [v[0]*scale,v[1]*scale,v[2]*scale]
+      if gesture_mode:
+        global gesture_scale = gesture_scale*scale
+      end
+      probe = p[actual[0]+v[0]*0.1,actual[1]+v[1]*0.1,actual[2]+v[2]*0.1,actual[3],actual[4],actual[5]]
+      if not is_within_safety_limits(probe):
+        textmsg("LEICA_FAULT_XYZ_SAFETY", probe)
+        stopl(1.0005549365)
+        write_output_integer_register(42, -6)
+        break
+      end
+      speedl([v[0],v[1],v[2],0,0,0], a=1.0005549365, t=0.02)
+      moving = True
+      if norm(v) > 0.00001:
+        state = 1
+      end
+      if gesture_mode and gesture_age >= 3.3000000000 and norm([actual[0]-neutral[0],actual[1]-neutral[1],actual[2]-neutral[2]]) <= 0.0005 and norm([actual_speed[0],actual_speed[1],actual_speed[2]]) < 0.0005:
+        state = 3
+      end
+    else:
+      if moving:
+        stopl(1.0005549365)
+        moving = False
+      end
+      sleep(0.02)
+    end
+    write_output_integer_register(42, state)
+    write_output_integer_register(43, consumed)
+  end
+  kill clock_thread
+end

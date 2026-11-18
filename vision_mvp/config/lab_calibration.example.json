@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "UNVERIFIED_DO_NOT_CONTROL",
+  "robot": {
+    "model": "UR5e",
+    "software_version": null,
+    "approved_interface": null,
+    "ip_address": null
+  },
+  "tool": {
+    "tcp_m_rad": [null, null, null, null, null, null],
+    "payload_kg": null
+  },
+  "neutral_tcp_m_rad": [null, null, null, null, null, null],
+  "camera_to_robot_mapping": {
+    "right": {"robot_axis": null, "sign": null},
+    "down": {"robot_axis": null, "sign": null},
+    "toward_subject": {"robot_axis": null, "sign": null}
+  },
+  "approved_motion_envelope_m": {
+    "right": null,
+    "down": null,
+    "toward_subject": null,
+    "max_step": null
+  },
+  "verified_by": null,
+  "verified_at": null,
+  "hold_test_evidence": null
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "voice_id": "en_US-ljspeech-high",
+  "sample_rate_hz": 22050,
+  "channels": 1,
+  "sample_width_bytes": 2,
+  "model_sha256": "5d4f08ba6a2a48c44592eed3ce56bf85e9de3dd4e20df90541ae68a8310c029a",
+  "config_sha256": "7e1f4634af596d83cca997fb7a931ba80b70f8a316a2655ee69c55365e0ace14",
+  "build_dependencies": {
+    "piper-tts": "1.8.0",
+    "pathvalidate": "3.3.1",
+    "onnxruntime": "1.31.1",
+    "numpy": "1.26.4"
+  },
+  "assets": {
+    "MOVE_LEFT": {
+      "filename": "move_left.wav",
+      "text": "A little to your left.",
+      "duration_s": 1.288707,
+      "bytes": 56876,
+      "sha256": "a5fbd1dc1c02bae5c09cc9a90888949a32b9e45a23a804510b90eeb47b68cac9"
+    },
+    "MOVE_RIGHT": {
+      "filename": "move_right.wav",
+      "text": "A little to your right.",
+      "duration_s": 1.207438,
+      "bytes": 53292,
+      "sha256": "c54d527ceec31283ad049cb6a0413b4bd11dc4778c2bf0f70cff8fcf41d44fe5"
+    },
+    "MOVE_UP": {
+      "filename": "move_up.wav",
+      "text": "A little higher.",
+      "duration_s": 0.952018,
+      "bytes": 42028,
+      "sha256": "1cbb53052aecc2c56365cdf2a83e9d1f1077fe96f080a3b02a49b5f05a98cff3"
+    },
+    "MOVE_DOWN": {
+      "filename": "move_down.wav",
+      "text": "A little lower.",
+      "duration_s": 0.893968,
+      "bytes": 39468,
+      "sha256": "c8fcec491dda5e60638dcd522cd8ecaaeb44374cda89903f9cc22213e482655c"
+    },
+    "MOVE_CLOSER": {
+      "filename": "move_closer.wav",
+      "text": "Come a little closer.",
+      "duration_s": 1.149388,
+      "bytes": 50732,
+      "sha256": "c4b718f9e00f7b8f3972cf07ca714630737cd5814ee366a7727a0e488b8e5bce"
+    },
+    "MOVE_FARTHER": {
+      "filename": "move_farther.wav",
+      "text": "Take a small step back.",
+      "duration_s": 1.532517,
+      "bytes": 67628,
+      "sha256": "0d2963954b814950dd0246c8c09795be37b3d04bf675e7116475805ecf4f5dc7"
+    },
+    "ARRIVED": {
+      "filename": "arrived.wav",
+      "text": "That's it. Hold still.",
+      "duration_s": 1.451247,
+      "bytes": 64044,
+      "sha256": "57a72b0d3d252f7da37b5917841a05999f89d63d07db5cc7ff57bf0e18b25e0c"
+    },
+    "UNLOCK": {
+      "filename": "unlock.wav",
+      "text": "",
+      "duration_s": 0.08,
+      "bytes": 3572,
+      "sha256": "41b068563b352b5306c89e1db9931c8bd5c5fdb1e3a1cfed6f792212089d0b24"
+    },
+    "INTRO_HELLO": {
+      "filename": "intro_hello.wav",
+      "text": "Hi there. Nice to meet you.",
+      "duration_s": 2.368435,
+      "bytes": 104492,
+      "sha256": "3c901578d56671cb61da6fe56e48121132c77f6ee441a69ed4f8a01a1b93780a"
+    },
+    "WAIT_MOMENT": {
+      "filename": "wait_moment.wav",
+      "text": "One moment.",
+      "duration_s": 0.777868,
+      "bytes": 34348,
+      "sha256": "5728dd692504d2863b694829a1faa036b84f20cb59066bd2bdf021bfdbd7cda0"
+    },
+    "WAIT_SECOND": {
+      "filename": "wait_second.wav",
+      "text": "Give me a second.",
+      "duration_s": 1.195828,
+      "bytes": 52780,
+      "sha256": "a0a1c968bde3c2f113348b7a90be356cf48c930712001e79d59784b1de5d7023"
+    },
+    "WAIT_FRAME": {
+      "filename": "wait_frame.wav",
+      "text": "Let me find a good frame for you.",
+      "duration_s": 2.194286,
+      "bytes": 96812,
+      "sha256": "11cede79b39deee212419adf5facaaa39e184cec2dd40260f32ecd81ff7759af"
+    },
+    "WAIT_ANGLE": {
+      "filename": "wait_angle.wav",
+      "text": "I'm looking for your best angle.",
+      "duration_s": 1.660227,
+      "bytes": 73260,
+      "sha256": "563d4108f48b2d16d1249361a76b9b9d941a246d9ff662ae996da0905bd7f981"
+    },
+    "WAIT_LOOK": {
+      "filename": "wait_look.wav",
+      "text": "Let me take a look.",
+      "duration_s": 1.242268,
+      "bytes": 54828,
+      "sha256": "213db599bf6e3dfd206f026f7a123770b45833140da39a6e6ee969350820961b"
+    },
+    "WAIT_SPOT": {
+      "filename": "wait_spot.wav",
+      "text": "I'm finding a good spot for you.",
+      "duration_s": 1.973696,
+      "bytes": 87084,
+      "sha256": "ca4473fbc011a554b3a13a0135107d53ef9336655ce148ee9625eed4d69fe7e7"
+    },
+    "COUNTDOWN_THREE": {
+      "filename": "countdown_three.wav",
+      "text": "Three.",
+      "duration_s": 0.371519,
+      "bytes": 16428,
+      "sha256": "bd776b8d8f806360c23f8e35605dd6762ae90f74fc3147a0daa8615df8a2a1e7"
+    },
+    "COUNTDOWN_TWO": {
+      "filename": "countdown_two.wav",
+      "text": "Two.",
+      "duration_s": 0.359909,
+      "bytes": 15916,
+      "sha256": "8a9d86b28d2a51e198fdeb694e0130096cac304a3554bcbe73500802176d3f3a"
+    },
+    "COUNTDOWN_ONE": {
+      "filename": "countdown_one.wav",
+      "text": "One.",
+      "duration_s": 0.290249,
+      "bytes": 12844,
+      "sha256": "f6b6f61c55e3b57186e7aee7094b207d8cb52fc2536098e19acca50eecb4ed6d"
+    }
+  }
+}

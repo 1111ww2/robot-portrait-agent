@@ -1,0 +1,82 @@
+{
+  "status": "DRAFT",
+  "robot_ip": "192.168.1.100",
+  "camera": 1,
+  "neutral_tcp_m_rad": [
+    -0.4919,
+    -0.1333,
+    0.2093,
+    2.221441469079183,
+    2.221441469079183,
+    0.0
+  ],
+  "neutral_joints_rad": [
+    0.0,
+    -1.5707963267948966,
+    1.5707963267948966,
+    -1.5707963267948966,
+    -1.5707963267948966,
+    0.0
+  ],
+  "tcp_offset_m_rad": [
+    0,
+    0,
+    0.2786,
+    0,
+    0,
+    0
+  ],
+  "rotation": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "range_scale": 0.05,
+  "speed_m_s": 0.005,
+  "acceleration_m_s2": 0.01,
+  "base_angle_deg": 3.0,
+  "base_rate_deg_s": 3.0,
+  "review": {
+    "home": true,
+    "path": true,
+    "direction": false,
+    "tool_payload": false,
+    "dynamics": false
+  },
+  "notes": [
+    "Candidate matches original teacher simulator home. User confirmed candidate pose/path clearance on 2026-09-09; robot has not moved to this home.",
+    "Nominal TCP must be replaced by measured TCP at candidate home before activation.",
+    "Direction, installed payload and dynamic performance require physical validation. Connection-time homing requires a separately reviewed transition route.",
+    "Review is tied to this exact profile; no automatic approval inheritance between trial and full performance.",
+    "Commissioning: 5% of simulator offsets, 5 mm/s, NOT final simulator performance.",
+    "Initialization start is the last recorded pose, not a current measurement. Fill reviewed waypoints ending at home; an empty or unreviewed route cannot move the robot."
+  ],
+  "initialization": {
+    "on_connect": true,
+    "path_reviewed": false,
+    "start_joints_rad": [
+      -1.5707963267948966,
+      -1.0471975511965976,
+      -1.7453292519943295,
+      -1.0471975511965976,
+      1.5707963267948966,
+      0.0
+    ],
+    "waypoints_rad": [],
+    "joint_speed_rad_s": 0.05,
+    "joint_acceleration_rad_s2": 0.05,
+    "timeout_s": 180.0
+  }
+}

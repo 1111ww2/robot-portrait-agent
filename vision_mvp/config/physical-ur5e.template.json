@@ -1,0 +1,84 @@
+{
+  "status": "DRAFT_INSTALLATION_REQUIRED",
+  "robot_model": "ur5e",
+  "reviewed_robot_model": "ur5e",
+  "robot_ip": null,
+  "reviewed_robot_ip": null,
+  "notes": [
+    "Expected model is selected from the user request, not a record of physical commissioning.",
+    "Fill this UR5e installation from its own measurements; do not copy the UR10e or simulator reference.",
+    "No controller payload, tool power or gripper settings are changed by this profile.",
+    "Canonical motion goal: 0.7 rad/s joint cap and nominal 3.3 s double sweep; Cartesian ceilings are derived, not 0.7 m/s. Installation remains unconfigured."
+  ],
+  "installation": {
+    "robot_model": "ur5e",
+    "reviewed_robot_model": "ur5e",
+    "reference": null,
+    "joints": null,
+    "tcp": null,
+    "payload_kg": null,
+    "center_of_gravity_m": null,
+    "lower": null,
+    "upper": null,
+    "speed": 0.2627513855729645,
+    "acceleration": 1.000554936529169,
+    "base_limit": null,
+    "base_rate": 0.7,
+    "max_tcp_linear_speed": null,
+    "max_tcp_angular_speed": null,
+    "review": {
+      "reference": false,
+      "tcp": false,
+      "payload": false,
+      "path": false,
+      "dynamics": false,
+      "direction": false,
+      "stop": false
+    },
+    "gesture": {
+      "duration_s": 3.3,
+      "repetitions": 2,
+      "joint_speed_limit": 0.7
+    }
+  },
+  "reviewed_installation": {},
+  "intro": {
+    "robot_model": "ur5e",
+    "reviewed_robot_model": "ur5e",
+    "reference_joints": null,
+    "reference_pose": null,
+    "tcp": null,
+    "waypoints": [],
+    "joint_speed": 0.7,
+    "joint_acceleration": 1.2,
+    "max_tcp_linear_speed": null,
+    "max_tcp_angular_speed": null,
+    "timeout": 120.0,
+    "reviewed": {},
+    "review": {
+      "robot": false,
+      "mount": false,
+      "tcp": false,
+      "payload": false,
+      "path": false,
+      "dynamics": false,
+      "stop": false,
+      "gesture": false
+    }
+  },
+  "intro_preview": null,
+  "paths": {
+    "MOVE_LEFT": null,
+    "MOVE_RIGHT": null,
+    "MOVE_UP": null,
+    "MOVE_DOWN": null,
+    "MOVE_CLOSER": null,
+    "MOVE_FARTHER": null
+  },
+  "reviewed_paths": {},
+  "hold_timeout": 3.0,
+  "action_timeout": 120.0,
+  "gate_timeout": 0.3,
+  "max_joint_speed": 0.7,
+  "reviewed_runtime": {}
+}

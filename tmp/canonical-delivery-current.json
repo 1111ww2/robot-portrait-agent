@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "bundle_path": "tmp/canonical-delivery-restart34-english",
+  "shared_runtime_source_sha256": "b0be4c509c0af66449de24954f1b751d178ead6c1bd8c689956544fa90dfb258",
+  "manifest_sha256": "99192d13bd961b66852718a8d585b4a96c319798212711b6a8bf96d6e88a5ae7",
+  "models": [
+    "ur5e",
+    "ur10e"
+  ],
+  "joint_speed_rad_s": 0.7,
+  "physical_acceptance": "pending"
+}

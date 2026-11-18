@@ -1,0 +1,14 @@
+{
+  "active": true,
+  "owner": true,
+  "control_fresh": false,
+  "phase": "INTRO",
+  "tracking": false,
+  "stale": false,
+  "runtime": {"epoch": 1, "status": "holding", "reason": "communication"},
+  "motion": {"active": false, "fresh": false},
+  "feedback": {"edge": null, "intensity": 0, "tone": "green", "gesture_id": 0},
+  "photo_ready": false,
+  "photo_latched": false,
+  "communication": {"status": "waiting", "recoverable": true, "remaining_ms": 2972}
+}

@@ -1,0 +1,50 @@
+{
+  "simulation_only": true,
+  "physical_acceptance": false,
+  "robot_model": "ur10e",
+  "reference_pose": [
+    -0.18963153692348175,
+    -0.6096838816511917,
+    0.26097114869435084,
+    -0.0012213596815925638,
+    3.1162765284819756,
+    0.038891915636886834
+  ],
+  "reference_joints": [
+    -1.6006999999999998,
+    -1.7271,
+    -2.2029999999999994,
+    -0.8079999999999998,
+    1.5951,
+    -0.030999999999999694
+  ],
+  "active_tcp": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "joint_speed_rad_s": 0.7,
+  "joint_acceleration_rad_s2": 1.2,
+  "gesture": {
+    "duration_s": 3.3,
+    "repetitions": 2,
+    "joint_speed_limit": 0.7
+  },
+  "ready": true,
+  "validation_source": "official_ursim_native",
+  "input_mode": "deterministic_camera_and_composition_fixture",
+  "cadence_clock": "controller",
+  "wall_time_reported": true,
+  "runtime_source_sha256": "3f6cdd1d55b1569867cb6d77a3a6847313aa6d036047b3ea87503a08cfc17ab0",
+  "program_sha256": {
+    "opening.urscript": "ccba1fb5ba1d365cd5f345f2fe34bca2074efda285ab3cb5b9db510d03977646",
+    "guidance.urscript": "016dc3a938402a1f78a1b1430f3fc4dc9b487127a93797ae4f9c0f24c2382f65"
+  },
+  "original_program_sha256": {
+    "opening.urscript": "40aa740cf338d72ed4959f8cdc31335dabbb607d6245720d9fea93584c4ac839",
+    "guidance.urscript": "37dc2265de6f45e7b9e4b5f34617a85a5006ffda3852d152419c185923917dd9"
+  }
+}

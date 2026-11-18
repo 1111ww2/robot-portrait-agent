@@ -1,0 +1,966 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="referrer" content="no-referrer"><title>Who Frames Whom</title>
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+:root{color-scheme:dark;--paper:#111111;--ink:#f5f5f3;--accent:#e20612;--leica-mark:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiPgo8cGF0aCBkPSJNOTkuOTk1NiAyMDBDMTU1LjIyMyAyMDAgMjAwIDE1NS4yMzIgMjAwIDEwMC4wMjJDMjAwIDQ0Ljc4NTUgMTU1LjIyMyAxLjUyNTg4ZS0wNSA5OS45OTU2IDEuNTI1ODhlLTA1QzQ0Ljc1OSAxLjUyNTg4ZS0wNSAwIDQ0Ljc4NTUgMCAxMDAuMDIyQzAgMTU1LjIzMiA0NC43NTkgMjAwIDk5Ljk5NTYgMjAwWiIgZmlsbD0iI0UyMDYxMiIvPgo8cGF0aCBkPSJNNjcuNjg5NyA1NS4zNDI2QzQ4LjgyNDggNTQuNjEwNiA0My43MTgzIDgxLjQxMzEgNDIuNTU0MSA4NS45OTA0QzQyLjQ5MjQgODYuMzE2NyA0Mi4zMzM2IDg2LjQzMTQgNDIuMzMzNiA4Ni40MzE0QzM2LjUxMjcgODUuNjM3NiAzMy4yOTM2IDg0LjQ0NyAzMy4yOTM2IDg0LjQ0N0wzMS45NzA3IDg4LjE5NTNDMzUuODk1NCA5MC4wNTYyIDQxLjY3MjEgOTAuNjIwNiA0MS42NzIxIDkwLjYyMDZDNDAuNTQzMiA5Ny44MjYyIDM0LjgzNyAxMTEuMzQ2IDM0LjgzNyAxMTEuMzQ2QzM0LjgzNyAxMTEuMzQ2IDI5Ljc3NDYgMTA5LjgwMyAyMy4zNzE3IDEwOS44MDNDMTUuMDQ2IDEwOS44MDMgMTIuMTE4IDExMy43MTkgMTEuOTA2MyAxMTYuMTk3QzExLjM1OTUgMTIyLjYxOCAxOS40OTk5IDEyNS42NzggMjUuMTM1NiAxMjUuNjc4QzM2LjEzMzUgMTI1LjY3OCA0MS44OTI2IDExOS43MjUgNDEuODkyNiAxMTkuNzI1QzQxLjg5MjYgMTE5LjcyNSA3Mi42ODE1IDEzMS40MTEgMTA0Ljk1MiAxMzEuNDExQzE0Ny4xODkgMTMxLjQxMSAxODIuNzg0IDEyMC4xNjYgMTgyLjc4NCAxMjAuMTY2TDE4MS42ODIgMTE2LjE5N0MxODEuNjgyIDExNi4xOTcgMTU1Ljg4NSAxMjUuMTg0IDEwNi40OTYgMTI0LjU3NkM3Mi40MjU4IDEyNC4xNjEgNDYuMzAyNCAxMTQuMjEzIDQ2LjMwMjQgMTE0LjIxM0M0Ni4zMDI0IDExNC4yMTMgNDcuMjkwMiAxMTIuNDQ5IDQ3Ljg0NTggMTExLjM0NkM1MS4yNTg5IDEwNC4zODggNTUuMzQyNCA5MC40MDAxIDU1LjM0MjQgOTAuNDAwMUM1NS4zNDI0IDkwLjQwMDEgNzguNzE0MSA4My44NTYxIDc4LjcxNDEgNjUuMjY0NUM3OC43MTQxIDU5LjM4MTkgNzMuMDk2MSA1NS41ODA3IDY3LjY4OTcgNTUuMzQyNlpNNjguNTcxNiA2MC42MzQzQzcyLjE5NjUgNjAuNjM0MyA3My41MDE4IDYzLjUwMDYgNzMuMjAxOSA2Ni4xNDY1QzcxLjQzOCA4MS42Nzc2IDU2LjAwMzggODUuMzI4OSA1Ni4wMDM4IDg1LjMyODlDNTYuMDAzOCA4NS4zMjg5IDU5LjczNDUgNjAuNjM0MyA2OC41NzE2IDYwLjYzNDNaTTEwNi4wNTUgNzMuNDIyNkMxMDIuMTMgNzMuNDIyNiA5OS40Mzk5IDc1LjAzNjYgOTkuNDM5OSA3OC43MTQzQzk5LjQzOTkgODIuNDM2MSAxMDIuNTggODMuMzQ0NSAxMDYuMDU1IDgzLjM0NDVDMTA5LjUzOCA4My4zNDQ1IDExMi44OSA4MS44NDUyIDExMi44OSA3OC4wNTI4QzExMi44OSA3NC4yNTE2IDEwOC44OTQgNzMuNDIyNiAxMDYuMDU1IDczLjQyMjZaTTE1OC4zMSA4Ni44NzIzQzE0Ny4wMzkgODYuODcyMyAxNDAuOTM2IDk2LjU5MTQgMTQwLjY3MSAxMDIuMzA2QzE0MC42MTggMTAzLjU1IDE0MC40NTEgMTAzLjYyOSAxNDAuNDUxIDEwMy42MjlDMTQwLjE4NiAxMDMuOTI5IDEzNi4zMDUgMTA4LjQ4IDEzMS40MTEgMTA4LjQ4QzEyNy40OTUgMTA4LjQ4IDEyNi43OCAxMDUuMjg3IDEyNi43OCAxMDMuMTg4QzEyNi43OCAxMDAuOTEzIDEyOC43MjEgOTEuOTQzNiAxMzQuMDU3IDkxLjk0MzZDMTM2Ljk1OCA5MS45NDM2IDEzOC42ODcgOTQuMzY4OSAxMzguNjg3IDk0LjM2ODlMMTQwLjIzIDg5LjI5NzdDMTQwLjIzIDg5LjI5NzcgMTM3Ljc5NiA4Ny4zMzEgMTMyLjczNCA4Ny4zMTMzQzEyMS44MzMgODcuMzA0NSAxMTQuNDc3IDk1LjM3NDMgMTE0LjIxMyAxMDIuNzQ3QzExNC4xNiAxMDMuODUgMTEzLjk3NCAxMDQuMjIgMTEzLjk5MiAxMDQuMjkxQzExMy42MzEgMTA0LjczMiAxMTEuMDgyIDEwNy44MTkgMTA3LjU5OCAxMDcuODE5QzEwNS4yMTcgMTA3LjgxOSAxMDUuMTczIDEwNS45OTMgMTA1LjE3MyAxMDUuMTczQzEwNS4xNzMgMTA0LjA1MyAxMDkuODAzIDg3Ljk3NDggMTA5LjgwMyA4Ny45NzQ4TDk3LjQ1NTUgODguMTk1M0w5My4yNjYzIDEwMy44NUM5My4yNjYzIDEwMy44NSA4Ni4zODcxIDEwOC42OTIgNzYuOTUwMiAxMDkuMzYyQzcyLjA4MTggMTA5LjY5NyA3MC4zMzU1IDEwNi42OSA3MC4zMzU1IDEwNC45NTJDNzAuMzM1NiAxMDQuMjI5IDcwLjMzNTUgMTA0LjI5MSA3MC4zMzU1IDEwNC4yOTFDNzAuMzQ0NCAxMDQuMjkxIDcyLjM4MTcgMTA0LjUxMSA3My44NjM0IDEwNC41MTFDNzUuMDI3NSAxMDQuNTExIDg5LjUxOCAxMDMuMzkxIDg5LjUxOCA5NC41ODk0Qzg5LjUxOCA4OS41NTM1IDg0LjQxMTUgODcuNzU0MyA3OC4wNTI2IDg3Ljc1NDNDNjYuMjk2MiA4Ny43NTQzIDU3Ljk4ODIgOTQuOTc3NSA1Ny45ODgyIDEwMy42MjlDNTcuOTg4MiAxMTEuNTIzIDY0LjcyNjMgMTE0Ljg3NCA3My40MjI0IDExNC44NzRDODMuMjkxNCAxMTQuODc0IDkzLjA0NTggMTA4LjkyMSA5My4wNDU4IDEwOC45MjFDOTMuMDQ1OCAxMDguOTIxIDkzLjYzNjcgMTE0Ljg3NCAxMDEuNDI0IDExNC44NzRDMTA5LjQ1OSAxMTQuODc0IDExNS43NTYgMTA4LjkyMSAxMTUuNzU2IDEwOC45MjFDMTE1Ljc1NiAxMDguOTIxIDExOS4yMzEgMTE0LjY1NCAxMjcuMjIxIDExNC42NTRDMTM1LjM4OCAxMTQuNjU0IDE0MS41NTMgMTA4LjAzOSAxNDEuNTUzIDEwOC4wMzlDMTQxLjU1MyAxMDguMDM5IDE0My44MjkgMTE0LjIxMyAxNTEuOTE2IDExNC4yMTNDMTU4LjI0IDExNC4yMTMgMTYxLjYxNyAxMTAuMjQ0IDE2MS42MTcgMTEwLjI0NEMxNjEuNjE3IDExMC4yNDQgMTYzLjM4MSAxMTQuMjEzIDE2OC44OTQgMTE0LjIxM0MxNzUuNjIzIDExNC4yMTMgMTgwLjU3OSAxMDkuNTgzIDE4MC41NzkgMTA5LjU4M0wxNzkuNDc3IDEwNS42MTRDMTc5LjQ3NyAxMDUuNjE0IDE3Ni45MTkgMTA3LjU5OCAxNzUuMDY3IDEwNy41OThDMTczLjY2NSAxMDcuNTk4IDE3Mi44NjIgMTA2LjQ2IDE3Mi44NjIgMTA1LjE3M0MxNzIuODYyIDEwMi4yOCAxNzcuNDkzIDg3Ljk3NDggMTc3LjQ5MyA4Ny45NzQ4TDE2Ni4yNDggODguMTk1M0wxNjUuODA3IDg5Ljk1OTJDMTY1LjgwNyA4OS45NTkyIDE2NC4xMzEgODYuODcyMyAxNTguMzEgODYuODcyM1pNNzguNDkzNiA5MS4yODIxQzgwLjE1MTcgOTEuMzc5MSA4MS40MTI5IDkyLjQ5OTIgODEuMzU5OSA5My43MDc1QzgxLjA4NjUgMTAxLjUzOSA3MS40MzggMTAwLjMyMiA3MS40MzggMTAwLjMyMkM3MS40MzggMTAwLjMyMiA3Mi44NTc5IDkwLjkzODEgNzguNDkzNiA5MS4yODIxWk0xNjAuNTE1IDkxLjUwMjZDMTYyLjgzNSA5MS41MDI2IDE2NC4wNDMgOTMuMzQ1OSAxNjQuMDQzIDk0LjgwOTlDMTY0LjA0MyA5NS4xMDk4IDE2Mi43MjkgMTA4LjQ4IDE1Ni4xMDUgMTA4LjQ4QzE1My4wNzEgMTA4LjQ4IDE1My4wMTggMTA1LjAzMiAxNTMuMDE4IDEwNC4wN0MxNTMuMDE4IDEwMS41MjIgMTU1LjAyIDkxLjUwMjYgMTYwLjUxNSA5MS41MDI2Wk0yMS4xNjY4IDExNC42NTRDMjEuNzQyNyAxMTQuNTk2IDIyLjIwOTcgMTE0LjYxOSAyMi43MTAyIDExNC42NTRDMjcuNTM0NSAxMTQuOTE4IDMxLjc1MDIgMTE2LjYzOCAzMS43NTAyIDExNi42MzhDMzEuNzUwMiAxMTYuNjM4IDI2Ljc4NDggMTIwLjQ4MyAyMi43MTAyIDEyMC42MDdDMTkuNTk2OSAxMjAuNzA0IDE3LjYzOSAxMTguNjc1IDE3LjYzOSAxMTcuNTJDMTcuNjM5IDExNS42MDIgMTkuNDM5MSAxMTQuODI4IDIxLjE2NjggMTE0LjY1NFoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K")}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;height:100dvh;overflow:hidden}button,select{font:inherit;min-height:48px;border:1px solid #686868;border-radius:6px;background:#252525;color:var(--ink);padding:12px 18px;cursor:pointer}button:disabled{opacity:.45}button:focus-visible{outline:3px solid var(--accent)}[hidden]{display:none!important}
+header{position:fixed;top:max(20px,env(safe-area-inset-top));left:max(24px,env(safe-area-inset-left));z-index:101;pointer-events:none;display:flex;align-items:center;gap:12px}.leica-mark{display:block;flex:none;aspect-ratio:1;background:var(--leica-mark) center/contain no-repeat}.live-mark{width:clamp(40px,4.4vw,58px)}.live-concept{max-width:250px;color:#e2e2df;font-size:11px;line-height:1.3;margin:6px 0 0;text-shadow:0 1px 6px #000}h1{margin:0;font:500 clamp(18px,2.2vw,28px) -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;letter-spacing:-.02em;text-shadow:0 1px 8px #000}header small{display:block;font-size:9px;letter-spacing:.22em;margin-top:6px;opacity:.65}main{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:12px}.image-stage{width:100%;height:100%;display:flex;align-items:center;justify-content:center}.viewport{position:relative;overflow:hidden;flex-shrink:0;background:#111111;box-shadow:0 0 0 1px #ffffff20}.viewport:after{content:'';position:absolute;inset:0;border:1px solid #ffffff20;pointer-events:none}#camera,#local-camera{display:block;width:100%;height:100%;object-fit:contain}#local-camera{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scaleX(-1);transform-origin:center}#crop{position:absolute;border:3px solid #fbf6dc;pointer-events:none;display:none;box-shadow:0 0 0 200vmax #00000024;transition:left .6s,top .6s,width .6s,height .6s}#crop:after{content:'';position:absolute;inset:8px;border:1px solid #fff5}body.finished #crop{border-color:var(--accent)}.veil{position:absolute;inset:0;display:grid;place-items:center;background:#111111e8;color:var(--ink);font:400 28px -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif}.aside{position:fixed;bottom:max(28px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:4;text-align:center;width:max-content;max-width:88vw;padding:12px 24px 14px;border-radius:18px;background:#101010e0;backdrop-filter:blur(12px);pointer-events:none}.arrow{display:inline-block;font-size:38px;vertical-align:middle;color:var(--accent);line-height:1;margin-right:12px}.aside h2{display:inline;font-size:clamp(22px,3vw,34px);font-weight:400;letter-spacing:-.04em}.aside p{font-size:clamp(14px,1.6vw,18px);margin:8px 0 0;color:#d2d2d0;line-height:1.4}.aside p:empty{display:none}#listening{position:fixed;right:28px;top:28px;z-index:4;font-size:10px;letter-spacing:.12em;color:#eeeeec;background:#171717b0;padding:6px 9px;border-radius:10px;pointer-events:none}
+#cue-frame{position:fixed;inset:0;pointer-events:none;z-index:100;--cue-color:#e20612}#cue-frame i{position:absolute;display:block;opacity:0;transition:width 180ms ease,height 180ms ease}[data-cue-edge="left"]{left:0;top:0;bottom:0;width:var(--cue-spread,25%);background:linear-gradient(to right,var(--cue-color) 0%,transparent 100%)}[data-cue-edge="right"]{right:0;top:0;bottom:0;width:var(--cue-spread,25%);background:linear-gradient(to left,var(--cue-color) 0%,transparent 100%)}[data-cue-edge="top"]{top:0;left:0;right:0;height:var(--cue-spread,25%);background:linear-gradient(to bottom,var(--cue-color) 0%,transparent 100%)}[data-cue-edge="bottom"]{bottom:0;left:0;right:0;height:var(--cue-spread,25%);background:linear-gradient(to top,var(--cue-color) 0%,transparent 100%)}
+#setup{position:fixed;inset:0;z-index:110;background:#080808ed;display:grid;place-items:center;padding:24px;overflow:auto}#setup article{width:min(580px,100%);padding:28px;border:1px solid #555555;border-radius:10px;background:#1b1b1b}#setup h2{font:500 32px -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;margin:0 0 12px}#setup p{color:#d0d0ce;line-height:1.5}#setup .row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}#prepare{background:var(--accent);border-color:var(--accent);color:#ffffff;font-weight:600}#setup small{display:block;line-height:1.5;color:#aaaaa8;margin:8px 0}.stop{border-color:#929292}#diagnostics{white-space:pre-wrap;overflow-wrap:anywhere;font:12px ui-monospace,monospace;color:#d0d0ce}@media(orientation:portrait){main{padding:10px}.aside{bottom:max(44px,env(safe-area-inset-bottom));padding:16px 20px}header{top:26px}.arrow{font-size:32px}}@media(max-height:480px){header small{display:none}.aside{bottom:16px;padding:8px 16px}.aside h2{font-size:22px}.arrow{font-size:28px}.aside p{font-size:13px;margin-top:3px}}
+#visitor-mic{position:fixed;bottom:max(24px,env(safe-area-inset-bottom));right:max(24px,env(safe-area-inset-right));z-index:5;display:flex;gap:8px;align-items:center;border-radius:28px;background:#181818ed;color:#e3e3e1;font-size:14px;min-height:48px;padding:10px 16px;box-shadow:0 4px 20px #0004}#visitor-mic[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}#visitor-mic svg{width:20px;height:20px}#visitor-mic[aria-pressed="true"] .mic-slash{display:none}@media(orientation:portrait){.aside{bottom:max(100px,env(safe-area-inset-bottom))}}
+
+[hidden]{display:none!important}.audio-controls{display:none!important}#visitor-tools{position:fixed;right:max(24px,env(safe-area-inset-right));top:max(20px,env(safe-area-inset-top));display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:calc(100vw - 48px);gap:8px;z-index:105}#visitor-start{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}#fullscreen-note{position:fixed;right:24px;top:80px;max-width:320px;z-index:106;background:#222222;padding:12px;border-radius:6px}body.visual-only .aside{bottom:max(28px,env(safe-area-inset-bottom))}
+#photo-countdown{position:fixed;inset:0;z-index:103;display:grid;place-content:center;text-align:center;pointer-events:none;text-shadow:0 2px 20px #000;background:#09090988}#photo-countdown strong{font:600 clamp(60px,19vw,210px) -apple-system,sans-serif;color:#f5f5f3;line-height:1}#photo-countdown span{font:500 clamp(24px,4vw,44px) -apple-system,sans-serif;color:#f5f5f3}#photo-result{position:fixed;inset:0;z-index:104;background:#101010f5;display:flex;align-items:center;justify-content:center;gap:24px;padding:clamp(18px,4vw,44px)}#photo-result img#photo-preview{max-width:min(72vw,1100px);max-height:85vh;object-fit:contain;border-radius:14px}#photo-result aside{width:min(23vw,280px);min-width:150px;text-align:center;color:#f5f5f3}#photo-qr{background:white;padding:8px;width:min(100%,220px);height:auto;border-radius:8px}#photo-result p{font-size:clamp(14px,2vw,20px);line-height:1.4}@media(orientation:portrait){#photo-result{flex-direction:column}#photo-result img#photo-preview{max-width:90vw;max-height:60vh}#photo-result aside{width:min(55vw,260px)}}
+
+/* 嵌入徕卡视觉素材，以便在本机离线演示。 */
+#photo-result aside{display:flex;flex-direction:column;align-items:center;gap:8px}#photo-result aside h2{margin:0;font-size:clamp(18px,2.1vw,25px);font-weight:600}#photo-result aside p{margin:0}#photo-result aside small{font-size:12px;line-height:1.35;color:#aaaaa8}.portrait-mark{width:clamp(46px,5vw,64px)}#photo-result .portrait-concept{max-width:25ch;font-size:clamp(12px,1.25vw,15px);line-height:1.4;color:#d0d0ce}#photo-result .portrait-concept:before{content:"";display:block;width:28px;height:2px;background:var(--accent);margin:5px auto 10px}
+@media(orientation:portrait){#photo-result{gap:12px}#photo-result img#photo-preview{max-height:48vh}#photo-result aside{gap:6px}#photo-qr{width:min(160px,18vh)}.portrait-mark{width:42px}#photo-result .portrait-concept:before{margin:2px auto 6px}}
+@media(max-height:480px){.portrait-mark{width:38px}#photo-result aside{gap:4px}#photo-result .portrait-concept{font-size:11px}#photo-result .portrait-concept:before{margin:1px auto 3px}#photo-qr{width:min(130px,28vh)}#photo-result aside small{font-size:10px}}
+#direction-audio-status{flex-basis:100%;max-width:320px;text-align:right;font-size:12px;line-height:1.4;color:#f5f5f3;text-shadow:0 1px 4px #000}
+</style>
+<div id="cue-frame" aria-hidden="true"><i data-cue-edge="left"></i><i data-cue-edge="right"></i><i data-cue-edge="top"></i><i data-cue-edge="bottom"></i></div>
+<header><span class="leica-mark live-mark" role="img" aria-label="Leica"></span><div><h1>Who Frames Whom</h1><small>A PORTRAIT IN NEGOTIATION</small><p class="live-concept">The camera chooses where you stand.</p></div></header><div id="listening" role="status"></div>
+<main><section class="image-stage" id="image-stage"><div class="viewport" id="viewport"><canvas id="camera" role="img" aria-label="Live mirror view"></canvas><div id="crop" hidden aria-hidden="true"></div><div class="veil" id="veil">One moment</div></div></section></main>
+<section id="visitor-status" class="aside" aria-live="polite"><span class="arrow" id="arrow">◎</span><h2 id="title">Come as you are</h2><p id="detail"></p></section>
+<div id="visitor-tools"><button id="visitor-start">Start</button><button id="visitor-fullscreen">Full screen</button><button id="visitor-replan">New target</button><button id="direction-sound" type="button" aria-pressed="true" aria-label="Mute spoken directions">Sound: on</button><button id="visitor-stop">Stop</button><small id="direction-audio-status" hidden role="status" aria-live="polite"></small></div><div id="fullscreen-note" hidden role="status"></div>
+<div id="photo-countdown" hidden role="status" aria-live="polite"><span id="photo-caption">This is your best position</span><strong id="photo-number"></strong></div>
+<section id="photo-result" hidden aria-label="Your portrait"><img id="photo-preview" alt="Your captured portrait"><aside><span class="leica-mark portrait-mark" role="img" aria-label="Leica"></span><h2>Your portrait</h2><img id="photo-qr" hidden alt="Scan to download your portrait"><p id="photo-share-status">Preparing your QR code…</p><button id="photo-retry" hidden>Retry QR code</button><p class="portrait-concept">The camera chooses where you stand. Who is framing whom?</p><small>Your portrait is temporarily available to download.</small></aside></section>
+<button hidden disabled id="visitor-mic" aria-pressed="false" aria-label="Turn microphone on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/><path class="mic-slash" d="M3 3l18 18"/></svg><span id="mic-label">Mic off</span></button>
+<section id="setup" aria-label="Staff setup"><article><h2>Prepare the portrait</h2><p>Staff only. Prepare the camera, then open the visitor view. Follow the arm and matching edge lights. Directions also play on this iPad. The microphone stays off.</p><div class="row"><button id="prepare">Prepare display</button><button id="enter">Show visitor view</button><button hidden disabled id="voice-check">Check microphone</button></div><small>Camera samples go to Claude. A portrait will be captured at the end and held temporarily for download. Directions play on this iPad; no microphone recording is used.</small><details><summary>Staff controls &amp; diagnostics</summary><div class="row"><button id="camera-on">Enable camera</button><button id="camera-off">Close camera</button><button hidden disabled id="sound">Voice: off</button></div><div class="row"><button id="start">Start</button><button id="restart">New target</button><button class="stop" id="stop">Stop</button><button id="fullscreen">Full screen</button></div><div class="audio-controls" hidden><label>Recognition language <select id="recognition-language"><option value="en-AU">English</option><option value="zh-CN">Chinese</option></select></label><br><label>Speaker voice <select id="speaker-voice"><option value="">System voice</option></select></label><div class="row"><button id="voice-preview">Try this voice</button></div><small>Audition a voice first. Tapping the visitor microphone enables the spoken reply; Voice: off mutes output. Quality depends on installed iPad voices.</small></div><label>Camera orientation <select id="camera-orientation"><option value="auto">Auto</option><option value="0">Original</option><option value="90">Rotate 90°</option><option value="180">Rotate 180°</option><option value="270">Rotate 270°</option></select></label><button id="rotate-camera">Rotate camera</button><small>Use Rotate camera if the picture is sideways. Changing orientation stops the current encounter; press Start afterward.</small><label>Preview <select id="preview-rate"><option value="30">30 fps</option><option value="60">Try 60 fps</option></select></label><small id="camera-status"></small><small id="voice-status"></small><small id="camera-metrics"></small><div id="diagnostics"></div></details><small>To reopen staff controls, double-tap the top-left title area, or press Shift+O. Use the visible Stop button to end the encounter.</small></article></section>
+<script id="guest-camera-geometry">
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.GuestCameraGeometry=factory()})(globalThis,function(){
+ function rotation(video,env,choice='auto'){
+  if(['0','90','180','270'].includes(String(choice)))return Number(choice);
+  const nav=env.navigator||{},ipad=/iPad/.test(nav.userAgent||'')||(nav.platform==='MacIntel'&&nav.maxTouchPoints>1);
+  // 部分 iPad Safari 在横屏页面中仍输出竖屏像素。
+  // 只处理这种情况，不旋转正常横屏视频、竖屏页面或桌面摄像头。
+  return ipad&&env.innerWidth>env.innerHeight&&video&&video.videoHeight>video.videoWidth?90:0;
+ }
+ function plan(w,h,turn=0,maxEdge=Infinity){
+  const scale=Math.min(1,maxEdge/Math.max(w,h)),dw=Math.max(1,Math.round(w*scale)),dh=Math.max(1,Math.round(h*scale));
+  const swapped=turn===90||turn===270,width=swapped?dh:dw,height=swapped?dw:dh;
+  // 先旋转再水平镜像，使结果与原生视频的 CSS 一致。
+  const transform=turn===90?[0,1,1,0,0,0]:turn===180?[1,0,0,-1,0,dh]:turn===270?[0,-1,-1,0,dh,dw]:[-1,0,0,1,dw,0];
+  return {width,height,drawWidth:dw,drawHeight:dh,transform};
+ }
+ function draw(canvas,video,turn=0,maxEdge=Infinity){
+  const p=plan(video.videoWidth,video.videoHeight,turn,maxEdge);
+  canvas.width=p.width;canvas.height=p.height;
+  const ctx=canvas.getContext('2d');if(!ctx)throw Error('Camera canvas unavailable');
+  ctx.setTransform(...p.transform);ctx.drawImage(video,0,0,p.drawWidth,p.drawHeight);
+  return p;
+ }
+ return {rotation,plan,draw};
+});
+</script>
+<script id="guest-photo">
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.GuestPhoto=factory()})(globalThis,function(){
+ function cameraReady(video,hidden=false){
+  if(hidden||!video||!video.videoWidth||!video.videoHeight||video.readyState<2||video.paused)return false;
+  if(video.srcObject&&typeof video.srcObject.getVideoTracks==='function'){
+   const tracks=video.srcObject.getVideoTracks();
+   if(!tracks.length||tracks[0].readyState==='ended'||tracks[0].muted)return false;
+  }
+  return true;
+ }
+ function canStart(state,video,hidden=false){
+  if(state&&state.communication&&state.communication.recoverable===true&&
+     (state.communication.status!=='healthy'||state.control_fresh!==true||state.photo_ready!==true||
+      !state.runtime||state.runtime.status!=='running'||!state.motion||state.motion.active!==false))return false;
+  return !!(state&&state.active&&state.owner&&state.photo_latched===true&&cameraReady(video,hidden));
+ }
+ async function captureVideo(video,env=globalThis,rotation=0){
+  const w=video&&video.videoWidth,h=video&&video.videoHeight;
+  if(!w||!h||video.readyState<2||video.paused)throw Error('Camera frame unavailable');
+  const canvas=env.document.createElement('canvas');
+  GuestCameraGeometry.draw(canvas,video,rotation);
+  return await new Promise((resolve,reject)=>canvas.toBlob(blob=>blob?resolve(blob):reject(Error('Photo encoding failed')),'image/jpeg',.9));
+ }
+ function createFlow({env=globalThis,valid,canStart:mayStart,canCapture:mayCapture,stage,capture,show,upload,share,hide,cancelAsync=()=>{},error=()=>{},introDelayMs=800}){
+  mayStart=mayStart||valid;mayCapture=mayCapture||valid;
+  let epoch=0,timer=null,status='idle',countNumber=3,resultBlob=null,sharing=false,shared=false;
+  function clearTimer(){if(timer!==null)env.clearTimeout(timer);timer=null}
+  function reset(){epoch++;clearTimer();cancelAsync();status='idle';resultBlob=null;sharing=false;shared=false;hide()}
+  function beginUpload(generation){
+   sharing=true;
+   Promise.resolve().then(()=>upload(resultBlob)).then(info=>{
+    if(generation===epoch){sharing=false;shared=true;share(info)}
+   }).catch(()=>{if(generation===epoch){sharing=false;error('upload')}});
+  }
+  function retry(){
+   if(status!=='result'||sharing||!resultBlob)return false;
+   if(!mayStart()){error('notready');return false}
+   beginUpload(epoch);return true;
+  }
+  function pause(){
+   if(status!=='countdown'&&status!=='capturing')return;
+   if(status==='capturing')countNumber=1;
+   epoch++;clearTimer();cancelAsync();status='paused';stage('paused',null);
+  }
+  function hold(){
+   if(status==='result'&&!shared){reset();return}
+   pause();
+  }
+  function step(generation,n){
+   if(generation!==epoch)return;
+   if(!mayCapture()){pause();return}
+   if(n>0){countNumber=n;stage('countdown',n);timer=env.setTimeout(()=>step(generation,n-1),1000);return}
+   status='capturing';stage('capturing',null);
+   Promise.resolve().then(()=>capture()).then(async blob=>{
+    if(generation!==epoch)return;
+    if(!mayCapture()){pause();return}
+    status='result';resultBlob=blob;show(blob);beginUpload(generation);
+   }).catch(()=>{if(generation===epoch){status='failed';error('capture')}});
+  }
+  function update(){
+   if(status==='result'||status==='failed')return;
+   if(status==='paused'){if(mayCapture()){status='countdown';step(++epoch,countNumber)}return}
+   if(status==='countdown'||status==='capturing'){if(!mayCapture())pause();return}
+   if(status!=='idle')return;
+   if(!mayStart())return;
+   status='countdown';countNumber=3;const generation=++epoch;stage('intro',null);
+   timer=env.setTimeout(()=>step(generation,3),introDelayMs);
+  }
+  return {update,reset,hold,retry,diagnostics:()=>({photo_started:status!=='idle',
+    photo_state:({idle:0,countdown:1,paused:2,capturing:3,result:4,failed:5})[status]})};
+ }
+ function diagnostics(state,video,hidden,flow){
+  return {...flow.diagnostics(),photo_active:!!(state&&state.active),
+    photo_owner:!!(state&&state.owner),photo_latched:!!(state&&state.photo_latched),
+    photo_camera_ready:cameraReady(video,hidden)};
+ }
+ return {cameraReady,canStart,captureVideo,createFlow,diagnostics};
+});
+</script>
+<script id="guest-painter">
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.GuestPainter=factory()})(globalThis,function(){
+  function paint(canvas,image){
+    const width=image.naturalWidth||image.width,height=image.naturalHeight||image.height;
+    if(!width||!height)throw Error('Decoded image has no dimensions');
+    const context=canvas.getContext('2d',{alpha:false});
+    if(canvas.width!==width||canvas.height!==height){canvas.width=width;canvas.height=height}
+    context.drawImage(image,0,0);
+  }
+  async function present(canvas,blob,env=globalThis){
+    if(env.createImageBitmap){
+      let bitmap;
+      try{bitmap=await env.createImageBitmap(blob)}catch{}
+      if(bitmap){try{paint(canvas,bitmap)}finally{bitmap.close()}return}
+    }
+    const url=env.URL.createObjectURL(blob),image=new env.Image();
+    try{
+      if(image.decode){image.src=url;await image.decode()}
+      else await new Promise((resolve,reject)=>{image.onload=resolve;image.onerror=reject;image.src=url});
+      paint(canvas,image);
+    }finally{env.URL.revokeObjectURL(url)}
+  }
+  function feedback(root,signal,levelOverride){
+    const raw=signal&&Number.isFinite(signal.intensity)?Math.max(0,Math.min(1,signal.intensity)):0;
+    const level=Number.isFinite(levelOverride)?levelOverride:raw>0?.7+.3*raw:0;
+    root.style.setProperty('--cue-color',signal&&signal.tone==='green'?'#39d98a':'#e20612');
+    // 仿真反馈标识机械臂当前锁定的动作模式；其他反馈或数据缺失时沿用默认宽度。
+    root.style.setProperty('--cue-spread',signal&&signal.motion_mode==='near'?'16%':'25%');
+    for(const edge of root.querySelectorAll('[data-cue-edge]')){
+      edge.style.opacity=String(signal&&(signal.edge==='all'||signal.edge===edge.dataset.cueEdge)?level:0);
+    }
+  }
+  function createFeedbackAnimator(root,env=globalThis){
+    let frame=null,expiry=null,epoch=0,edge=null,tone=null,gestureId=null,current=0;
+    function cancel(){
+      epoch++;
+      if(frame!==null && env.cancelAnimationFrame)env.cancelAnimationFrame(frame);
+      if(expiry!==null)env.clearTimeout(expiry);
+      frame=null;expiry=null;
+    }
+    function clear(){cancel();edge=null;tone=null;gestureId=null;current=0;feedback(root,null)}
+    function set(signal){
+      if(!signal||!['left','right','top','bottom','all'].includes(signal.edge)||!Number.isFinite(signal.intensity)
+          ||(env.document&&env.document.hidden)){clear();return}
+      const raw=Math.max(0,Math.min(1,signal.intensity));
+      const value=raw>0?.7+.3*raw:0;
+      const changed=edge!==signal.edge||tone!==signal.tone||gestureId!==signal.gesture_id;
+      const from=current;cancel();
+      if(changed&&!value){clear();return}
+      edge=signal.edge;tone=signal.tone;gestureId=signal.gesture_id;
+      const freshEpoch=epoch;
+      expiry=env.setTimeout(()=>{if(epoch===freshEpoch)clear()},350);
+      if(changed||!env.requestAnimationFrame||!env.performance){
+        // 立即点亮新方向对应的边缘，同时熄灭上一方向。
+        current=value;feedback(root,signal,current);return;
+      }
+      const start=env.performance.now();
+      const draw=()=>{
+        if(epoch!==freshEpoch)return;
+        if(env.document&&env.document.hidden){clear();return}
+        const fraction=Math.min(1,Math.max(0,(env.performance.now()-start)/80));
+        current=from+(value-from)*fraction;
+        feedback(root,signal,current);
+        if(fraction<1)frame=env.requestAnimationFrame(draw);else frame=null;
+      };
+      frame=env.requestAnimationFrame(draw);
+    }
+    return {set,clear};
+  }
+  return {paint,present,feedback,createFeedbackAnimator};
+});
+</script>
+<script id="guest-dialogue">
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.GuestDialogue=factory()})(globalThis,function(){
+ function isStop(text){return /^(\u505c|\u505c\u6b62|\u505c\u6b62\u4e92\u52a8|\u522b\u52a8|\u7ed3\u675f\u4e92\u52a8|stop|stop please|please stop|stop moving|stop the interaction)$/i.test(text.trim().replace(/[。.!！?？\s]+$/g,''))}
+ function portraitVoices(voices){return voices.filter(v=>/^en([-_]|$)/i.test(v.lang||'')&&!/^(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Fred|Good News|Grandma|Grandpa|Jester|Junior|Kathy|Organ|Ralph|Superstar|Trinoids|Whisper|Wobble|Zarvox)(\b|$)/i.test(v.name||''))}
+ function chooseVoice(voices,preferred=''){
+  const english=portraitVoices(voices);
+  const selected=english.find(v=>(v.voiceURI||v.name)===preferred);if(selected)return selected;
+  const score=v=>(/enhanced|premium|natural|siri/i.test(v.name)?100:0)+(/google|microsoft/i.test(v.name)?40:0)+(/samantha|serena|ava/i.test(v.name)?20:0)+(/karen/i.test(v.name)?10:0)+(/en-AU/i.test(v.lang)?3:0);
+  return english.slice().sort((a,b)=>score(b)-score(a))[0];
+ }
+ function createVoice(env,onTranscript,onStatus){
+  const Recognition=env.SpeechRecognition||env.webkitSpeechRecognition;
+  const available=!!(env.isSecureContext&&Recognition),now=()=>env.performance?env.performance.now():Date.now();
+  let enabled=false,handsFree=false,rec=null,epoch=0,lastId=-1,latestId=-1,lastSpeech='',encounter=null,speaking=false,previewing=false,preferredVoice='',blocked=false,resumeAt=0,recognitionStarted=false,recognitionLanguage='en-AU',voiceError=0,results=0,listenRequested=0,playbackStarted=false,spoken=0,speakerError=0,speechIssued=0,utterance=null;
+  let eventSequence=0;const events=[];
+  function trace(event,reason=0){events.push([++eventSequence,Math.round(now()),event,reason,epoch]);if(events.length>12)events.shift()}
+  function cancel(reason=0){if(rec||speaking)trace(9,reason);epoch++;handsFree=false;recognitionStarted=false;const stopSpeaker=speaking;const old=rec;rec=null;if(old){try{old.abort()}catch{}}speaking=false;playbackStarted=false;previewing=false;utterance=null;if(stopSpeaker&&env.speechSynthesis)env.speechSynthesis.cancel();resumeAt=now()+800}
+  function listen(){
+   if(!available||blocked){onStatus('Microphone unavailable. Ask staff to check Safari speech permissions.');return null}
+   cancel(1);handsFree=true;const generation=epoch,current=new Recognition();rec=current;trace(1);
+   listenRequested=now();recognitionStarted=false;current.lang=recognitionLanguage;current.continuous=false;current.interimResults=false;
+   current.onstart=()=>{if(generation===epoch&&rec===current){recognitionStarted=true;voiceError=0;trace(2);onStatus('Listening')}};
+   for(const [name,event] of [["onaudiostart",3],["onsoundstart",4],["onspeechstart",5]])current[name]=()=>{if(generation===epoch&&rec===current)trace(event)};
+   current.onresult=e=>{if(generation!==epoch||rec!==current||speaking)return;
+    const result=e.results[e.resultIndex||0];if(!result||result.isFinal===false)return;
+    const text=result[0].transcript.trim();if(!text)return;
+    trace(6);results=Math.min(240,results+1);lastId=latestId;handsFree=false;cancel(2);onStatus('Heard you.');onTranscript(text)};
+   current.onerror=e=>{if(generation!==epoch)return;voiceError=({'not-allowed':1,'service-not-allowed':2,'audio-capture':3,'network':4,'no-speech':5,'aborted':6})[e.error]||7;trace(7,voiceError);
+    if(!['no-speech','aborted'].includes(e.error)){blocked=true;onStatus('Voice unavailable. Staff: check microphone, Siri/Dictation and network access.');cancel(3)}};
+   current.onend=()=>{if(generation===epoch&&rec===current){trace(8);rec=null;handsFree=false;recognitionStarted=false;onStatus('Microphone off. Tap to speak again.')}};
+   try{current.start();onStatus('Starting microphone')}catch{voiceError=8;trace(7,8);blocked=true;cancel(4);onStatus('Microphone needs staff activation.');return null}
+   return current;
+  }
+  function render(state){
+   if(speaking&&!playbackStarted&&now()-speechIssued>8000){speakerError=10;trace(13,10);cancel(5);onStatus('Reply audio did not start. Read the reply on screen.')}
+   if(previewing)return;
+   if(rec&&!recognitionStarted&&now()-listenRequested>8000){voiceError=10;trace(7,10);blocked=true;cancel(6);onStatus('Microphone did not start. Tap Mic to retry.')}
+   if(!state.active||state.stale||state.owner===false){cancel(!state.active?7:state.stale?8:9);onStatus('');return}
+   const d=state.dialogue||{};if(d.encounter!==undefined&&d.encounter!==encounter){encounter=d.encounter;lastId=-1;lastSpeech=''}if(d.id!==undefined)latestId=d.id;
+   const fresh=enabled&&d.speech&&d.id!==lastId&&d.speech!==lastSpeech&&env.speechSynthesis;
+   if(rec)return; // 新的视觉建议不能打断用户手动开启的麦克风。
+   if(fresh){
+    cancel(10);trace(10);lastId=d.id;lastSpeech=d.speech;speaking=true;playbackStarted=false;speakerError=0;speechIssued=now();const generation=epoch;
+    const u=new env.SpeechSynthesisUtterance(d.speech);utterance=u;u.voice=chooseVoice(env.speechSynthesis.getVoices?env.speechSynthesis.getVoices():[],preferredVoice);u.lang=u.voice?u.voice.lang:'en-AU';u.rate=1;u.pitch=1;
+    u.onstart=()=>{if(generation===epoch){trace(11);playbackStarted=true;spoken=Math.min(240,spoken+1);onStatus('Speaking')}};
+    const end=()=>{if(generation===epoch){trace(12);speaking=false;playbackStarted=false;utterance=null;resumeAt=now()+800;onStatus('Microphone off. Tap to speak.')}};
+    u.onend=end;u.onerror=e=>{if(generation!==epoch)return;speakerError=({'not-allowed':1,'audio-busy':2,'synthesis-unavailable':3,'synthesis-failed':4,'voice-unavailable':5,'language-unavailable':6})[e.error]||7;trace(13,speakerError);end();onStatus('Reply audio unavailable. Read the reply on screen.')};
+    try{env.speechSynthesis.speak(u);onStatus('Preparing reply audio')}catch{speakerError=8;trace(13,8);end()}
+    return;
+   }
+   // 仅在用户明确按下麦克风按钮时启动识别。
+  }
+  function arm(){blocked=false;voiceError=0;handsFree=true;return listen()}
+  function preview(){
+   if(!env.speechSynthesis)return;
+   cancel(11);trace(10);previewing=true;speaking=true;speakerError=0;speechIssued=now();const generation=epoch;
+   const u=new env.SpeechSynthesisUtterance('Hi there. Take your time. We can find a frame together.');utterance=u;
+   u.voice=chooseVoice(env.speechSynthesis.getVoices?env.speechSynthesis.getVoices():[],preferredVoice);
+   u.lang=u.voice?u.voice.lang:'en-AU';u.rate=1;u.pitch=1;
+   u.onstart=()=>{if(generation===epoch){trace(11);playbackStarted=true;spoken=Math.min(240,spoken+1)}};
+   const end=()=>{if(generation===epoch){trace(12);speaking=false;playbackStarted=false;utterance=null;previewing=false;resumeAt=now()+800;onStatus('Voice preview finished.')}};
+   u.onend=end;u.onerror=e=>{trace(13,({'not-allowed':1,'audio-busy':2,'synthesis-unavailable':3,'synthesis-failed':4,'voice-unavailable':5,'language-unavailable':6})[e.error]||7);end()};try{env.speechSynthesis.speak(u)}catch{trace(13,8);end()}
+  }
+  return {available,cancel,listen,render,arm,preview,skipReply(state){const d=state.dialogue||{};if(d.id!==undefined){latestId=d.id;lastId=d.id;lastSpeech=d.speech||''}},setVoice(value){preferredVoice=value},
+   status(){return {microphone:handsFree&&!blocked&&available,sound:enabled,speaking:speaking&&playbackStarted,outputPending:speaking&&!playbackStarted,speakerError,listening:!!rec&&recognitionStarted,starting:!!rec&&!recognitionStarted,blocked,language:recognitionLanguage}},
+   diagnostics(){return {voice_events:events.map(e=>e.slice()),voice_available:available,voice_armed:handsFree,voice_listening:!!rec&&recognitionStarted,voice_starting:!!rec&&!recognitionStarted,voice_blocked:blocked,voice_error:voiceError,voice_results:results,voice_output:enabled,voice_spoken:spoken,voice_speaker_error:speakerError}},
+   setLanguage(value){if(['en-AU','zh-CN'].includes(value)){cancel(12);recognitionLanguage=value}},
+   setHandsFree(value){handsFree=!!value;if(!handsFree)cancel(13)},
+   setEnabled(value){enabled=!!value;if(!enabled)cancel(14)}};
+ }
+ return {createVoice,isStop,chooseVoice,portraitVoices};
+});
+</script>
+<script id="guest-recorder">
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.GuestRecorder=factory()})(globalThis,function(){
+ function create(env,transcribe,onText,onStatus){
+  let generation=0,stream=null,recorder=null,context=null,timer=null,controller=null,mode='off',level=0,results=0,error=0;
+  const available=!!(env.isSecureContext&&env.MediaRecorder&&env.navigator&&env.navigator.mediaDevices&&env.navigator.mediaDevices.getUserMedia);
+  function release(){if(timer!==null){env.clearInterval(timer);timer=null}if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}if(context){context.close().catch(()=>{});context=null}}
+  function cancel(){generation++;if(controller)controller.abort();controller=null;const old=recorder;recorder=null;if(old&&old.state!=='inactive')try{old.stop()}catch{}release();mode='off';level=0}
+  function finish(){if(recorder&&recorder.state!=='inactive'){mode='processing';recorder.stop()}else cancel()}
+  async function start(language='en'){
+   cancel();const current=++generation;mode='starting';error=0;onStatus('Starting microphone');
+   if(!available){mode='off';error=1;onStatus('Microphone unavailable. Use Safari over HTTPS.');return}
+   try{
+    const AudioContext=env.AudioContext||env.webkitAudioContext;
+    if(AudioContext){context=new AudioContext();await context.resume()}
+    if(current!==generation)return;
+    const input=await env.navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true},video:false});
+    if(current!==generation){input.getTracks().forEach(t=>t.stop());return}stream=input;
+    let analyser=null,samples=null;
+    if(context){analyser=context.createAnalyser();analyser.fftSize=1024;context.createMediaStreamSource(input).connect(analyser);samples=new Float32Array(analyser.fftSize)}
+    const mime=['audio/mp4','audio/webm;codecs=opus','audio/webm'].find(t=>env.MediaRecorder.isTypeSupported(t));
+    const active=new env.MediaRecorder(input,mime?{mimeType:mime}:undefined);recorder=active;
+    const chunks=[];let bytes=0,heard=0,lastSound=0;const started=env.performance.now();
+    active.ondataavailable=e=>{if(current!==generation||!e.data.size)return;bytes+=e.data.size;if(bytes>2*1024*1024){cancel();error=2;onStatus('Recording too large. Please try a shorter sentence.');return}chunks.push(e.data)};
+    active.onerror=()=>{if(current!==generation)return;cancel();error=3;onStatus('Microphone recording failed. Tap Mic to retry.')};
+    active.onstop=async()=>{
+     if(current!==generation)return;recorder=null;release();mode='processing';
+     if(!chunks.length){mode='off';onStatus('No audio captured. Tap Mic to retry.');return}
+     controller=new env.AbortController();onStatus('Understanding your words');
+     try{const result=await transcribe(new env.Blob(chunks,{type:active.mimeType||mime||'audio/mp4'}),language,controller.signal);
+      if(current!==generation)return;mode='off';controller=null;
+      if(result.text){results++;onStatus('Heard you.');onText(result.text)}else onStatus('I did not hear words. Tap Mic and try again.');
+     }catch(e){if(current!==generation)return;mode='off';error=4;controller=null;onStatus('Speech unavailable. Staff: check the laptop voice model.')}
+    };
+    active.start(250);mode='recording';onStatus('Listening');
+    timer=env.setInterval(()=>{
+     if(current!==generation||mode!=='recording')return;const now=env.performance.now();
+     if(analyser){analyser.getFloatTimeDomainData(samples);const rms=Math.sqrt(samples.reduce((sum,x)=>sum+x*x,0)/samples.length);level=Math.min(100,Math.round(rms*500));
+      if(rms>.008){heard+=100;lastSound=now}}
+     if(now-started>=15000||(heard>=300&&now-lastSound>1300))finish();
+    },100);
+   }catch(e){if(current!==generation)return;cancel();error=1;onStatus('Microphone permission needed. Allow it in Safari.')}
+  }
+  return {start,cancel,finish,available,status(){return {mode,level,busy:mode!=='off',listening:mode==='recording',starting:mode==='starting',processing:mode==='processing'}},diagnostics(){return {voice_local:true,voice_available:available,voice_armed:mode==='recording'||mode==='starting',voice_listening:mode==='recording',voice_starting:mode==='starting',voice_processing:mode==='processing',voice_level:level,voice_results:Math.min(240,results),voice_error:error}}};
+ }
+ return {create};
+});
+</script>
+
+<script id="ipad-camera">
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.IPadCamera=factory()})(globalThis,function(){
+ function monitorPreview(video,track){
+  let stopped=false,id=null,anchor=null,fps=0,frames=0;
+  function sample(now,meta){
+   if(stopped)return;frames=meta.presentedFrames;
+   if(anchor===null)anchor={time:now,frames:meta.presentedFrames};
+   else if(now-anchor.time>=750){fps=Math.round((meta.presentedFrames-anchor.frames)*10000/(now-anchor.time))/10;anchor={time:now,frames:meta.presentedFrames}}
+   id=video.requestVideoFrameCallback(sample);
+  }
+  if(video.requestVideoFrameCallback)id=video.requestVideoFrameCallback(sample);
+  return {sequence(){if(video.getVideoPlaybackQuality){const q=video.getVideoPlaybackQuality();return Math.max(frames,q.totalVideoFrames-(q.droppedVideoFrames||0))}return video.requestVideoFrameCallback?frames:video.currentTime},snapshot(){const settings=track.getSettings?track.getSettings():{};
+   return {preview_fps:fps,configured_fps:settings.frameRate||0,video_paused:!!video.paused,track_muted:!!track.muted,track_ended:track.readyState==='ended',version:3};
+  },stop(){stopped=true;if(id!==null&&video.cancelVideoFrameCallback)video.cancelVideoFrameCallback(id)}};
+ }
+ function createCamera(env,request,onStatus,onRunning,onPreview=()=>{},extraDiagnostics=()=>({}),getRotation=()=>0){
+  let epoch=0,stream=null,video=null,canvas=null,session=null,abort=null,timer=null,opening=false,lastTime=-1,failures=0,targetFps=30,monitor=null;
+  let timing=newTiming(),lastUploadAck=null;
+  function newTiming(){return {camera_first_error_stage:0,camera_first_error_kind:0,camera_first_error_status:0,camera_first_error_ms:0,
+   camera_max_ticket_ms:0,camera_max_fresh_frame_ms:0,camera_max_encode_ms:0,camera_max_upload_ms:0,camera_error_count:0,camera_max_upload_ack_gap_ms:0}}
+  function clockMs(){return env.performance&&typeof env.performance.now==='function'?env.performance.now():Date.now()}
+  function duration(start){return Math.min(10000,Math.max(0,Math.round(clockMs()-start)))}
+  function recordStage(segment,start){
+   const elapsed=duration(start),name=['','ticket','fresh_frame','encode','upload'][segment];
+   if(name){timing[name+'_ms']=elapsed;const key='camera_max_'+name+'_ms';timing[key]=Math.max(timing[key],elapsed)}
+   return elapsed;
+  }
+  function recordError(error,segment,elapsed){
+   // 错误编号：1 表示 HTTP，2 表示本地超时，3 表示外部取消，4 表示其他传输错误，5 表示等待新帧，6 表示图像编码。
+   const value=error&&error.camera_error_kind,kind=Number.isInteger(value)&&value>=1&&value<=6?value:segment===2?5:segment===3?6:4;
+   const valueStatus=error&&error.camera_http_status,status=Number.isInteger(valueStatus)&&valueStatus>=0&&valueStatus<=599?valueStatus:0;
+   timing.error_stage=segment;timing.error_ms=elapsed;timing.camera_error_count=Math.min(240,timing.camera_error_count+1);
+   if(timing.camera_first_error_kind===0){timing.camera_first_error_stage=segment;timing.camera_first_error_kind=kind;timing.camera_first_error_status=status;timing.camera_first_error_ms=elapsed}
+  }
+  const available=!!(env.isSecureContext&&env.navigator&&env.navigator.mediaDevices&&env.navigator.mediaDevices.getUserMedia);
+  async function stop(message,stopOrigin=0){
+   epoch++;opening=false;if(monitor)monitor.stop();monitor=null;if(timer!==null)env.clearTimeout(timer);timer=null;
+   if(abort)abort.abort();abort=null;
+   if(stream)stream.getTracks().forEach(track=>track.stop());stream=null;
+   onPreview(null);if(video){video.srcObject=null;video.remove()}video=null;canvas=null;
+   const old=session;session=null;onRunning(false);if(message)onStatus(message);
+   if(old){try{const body={session:old};if(Number.isInteger(stopOrigin)&&stopOrigin>=1&&stopOrigin<=10)body.stop_origin=stopOrigin;await request('/camera/stop',body)}catch{}}
+  }
+  async function start(){
+   if(opening||stream)return;
+   if(!available){onStatus('Use the trusted HTTPS page and allow camera access in Safari.');return}
+   opening=true;onRunning(true);const generation=++epoch;abort=new env.AbortController();const signal=abort.signal;
+   // 跨访客会话保留首次失败原因，仅在相机启动时重置。
+   timing=newTiming();lastUploadAck=null;const openingAt=clockMs();
+   onStatus('Allow camera access to continue.');
+   try{
+    const media=await env.navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'user'},width:{ideal:1280},height:{ideal:720},frameRate:{ideal:targetFps,max:targetFps}},audio:false});
+    if(generation!==epoch){media.getTracks().forEach(track=>track.stop());return}
+    stream=media;video=env.document.createElement('video');video.muted=true;video.autoplay=true;video.playsInline=true;
+    video.setAttribute('playsinline','');video.id='local-camera';
+    env.document.body.appendChild(video);video.srcObject=media;onPreview(video);await video.play();
+    if(generation!==epoch)return;
+    let opened;const sessionAt=clockMs();try{opened=await request('/camera/start',{},null,signal)}catch(error){if(generation===epoch)recordError(error,0,duration(sessionAt));opened={session:null}}
+    if(generation!==epoch){try{await request('/camera/stop',{session:opened.session})}catch{}return}
+    if(env.performance)monitor=monitorPreview(video,media.getVideoTracks()[0]);
+    session=opened.session;canvas=env.document.createElement('canvas');lastTime=-1;failures=0;opening=false;onRunning(true);
+    media.getVideoTracks().forEach(track=>track.addEventListener('ended',()=>{if(generation===epoch)stop('Camera disconnected. Staff: enable it again.',7)}));
+    onStatus('Camera open. Connecting to the computer.');
+    function nextFreshFrame(){
+     const target=video,previousTime=target.currentTime,previous=monitor?monitor.sequence():previousTime,track=stream.getVideoTracks()[0];
+     return new Promise(resolve=>{
+      let done=false,frameId=null,pollId=null;
+      const finish=ok=>{if(done)return;done=true;env.clearTimeout(deadline);if(pollId!==null)env.clearTimeout(pollId);if(frameId!==null&&target.cancelVideoFrameCallback)target.cancelVideoFrameCallback(frameId);signal.removeEventListener('abort',aborted);resolve(ok)};
+      const aborted=()=>finish(false),deadline=env.setTimeout(()=>finish(false),180);
+      signal.addEventListener('abort',aborted,{once:true});
+      if(signal.aborted){finish(false);return}
+      if(monitor){const check=()=>{if(generation!==epoch)return finish(false);if(!track.muted&&track.readyState!=='ended'&&(monitor.sequence()>previous||(target.readyState>=2&&!target.paused&&target.currentTime>previousTime)))return finish(true);pollId=env.setTimeout(check,10)};check()}
+      else if(target.requestVideoFrameCallback){const check=()=>{if(generation!==epoch)return finish(false);if(target.currentTime>previous)return finish(true);frameId=target.requestVideoFrameCallback(check)};frameId=target.requestVideoFrameCallback(check)}
+      else{const check=()=>{if(generation!==epoch)return finish(false);if(target.currentTime>previous)return finish(true);pollId=env.setTimeout(check,10)};check()}
+     });
+    }
+    async function upload(){
+     if(generation!==epoch)return;
+     let idle=true,stage=clockMs(),segment=0;
+     try{
+      if(video.paused)await video.play();
+      if(generation!==epoch)return;
+      if(!session){const opened=await request('/camera/start',{},null,signal);if(generation!==epoch){try{await request('/camera/stop',{session:opened.session})}catch{}return}session=opened.session}
+      stage=clockMs();segment=1;
+      const permit=await request('/camera/ticket',{session,diagnostics:diagnostics()},null,signal);
+      recordStage(segment,stage);
+      if(generation!==epoch)return;
+      if(video.videoWidth){
+       stage=clockMs();segment=2;
+       // 凭据可能比下一帧更早到达。在此等待新帧，避免跳过本轮后再额外等待 100 毫秒。
+       if(!await nextFreshFrame())throw Error('No fresh camera frame');
+       recordStage(segment,stage);
+       if(generation!==epoch)return;
+       stage=clockMs();segment=3;
+       GuestCameraGeometry.draw(canvas,video,getRotation(video),640);
+       lastTime=video.currentTime;
+       const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',.55));
+       recordStage(segment,stage);
+       if(generation!==epoch)return;
+       if(!blob||blob.size>524288)throw Error('image');
+       stage=clockMs();segment=4;
+       await request('/camera/frame',blob,{'Content-Type':'image/jpeg','X-Camera-Session':session,'X-Camera-Ticket':permit.ticket},signal);
+       recordStage(segment,stage);
+       if(generation!==epoch)return;
+       const acknowledged=clockMs();
+       if(lastUploadAck!==null)timing.camera_max_upload_ack_gap_ms=Math.max(timing.camera_max_upload_ack_gap_ms,Math.min(10000,Math.max(0,Math.round(acknowledged-lastUploadAck))));
+       lastUploadAck=acknowledged;
+       idle=false;failures=0;onStatus('Camera connected.');
+      }
+     }catch(error){
+      if(generation!==epoch)return;
+      failures++;recordError(error,segment,recordStage(segment,stage));
+      if(failures%10===0){
+       const renewalAt=clockMs();try{const opened=await request('/camera/start',{},null,signal);
+        if(generation!==epoch){try{await request('/camera/stop',{session:opened.session})}catch{}return}
+        session=opened.session;
+       }catch(error){if(generation===epoch)recordError(error,0,duration(renewalAt))}
+      }
+      onStatus('Preview remains open. Reconnecting to the computer.');
+     }
+     // 上传过期或失败后重新获取凭据并采集新帧。在活跃交互中，可见且正常工作的相机也可从凭据、采帧或编码错误中快速恢复。
+     // 每次重试都使用新凭据和新帧，不延长旧帧有效期，也不重新启动已停止的机器人。
+     const retryDelays=[40,100,250];
+     let quickRetry=segment===4;
+     if(failures&&segment>=1&&segment<=3&&stream&&!env.document.hidden){
+      const track=stream.getVideoTracks()[0];
+      try{quickRetry=extraDiagnostics().photo_active===true&&track&&track.readyState==='live'&&!track.muted&&video&&!video.paused&&video.readyState>=2}catch{}
+     }
+     const delay=failures?(quickRetry&&failures<=retryDelays.length?retryDelays[failures-1]:500):(idle?100:0);
+     if(generation===epoch)timer=env.setTimeout(upload,delay);
+    }
+    timer=env.setTimeout(upload,0);
+   }catch(error){
+    if(generation!==epoch)return;
+    recordError(error,0,duration(openingAt));
+    await stop(error&&error.name==='NotAllowedError'?'Camera denied. Allow camera access in Safari website settings.':'Camera unavailable. Close other camera apps and try again.');
+   }
+  }
+ function diagnostics(){return {...extraDiagnostics(),...(monitor?monitor.snapshot():{}),...timing,hidden:!!env.document.hidden,version:3,photo_flow_version:4}}
+  async function setFrameRate(value){targetFps=value===60?60:30;
+   const track=stream&&stream.getVideoTracks()[0];if(!track)return;
+   try{await track.applyConstraints({frameRate:{ideal:targetFps,max:targetFps}});onStatus('Requested '+targetFps+' fps preview. Actual rate may differ.')}
+   catch{onStatus('Frame rate unavailable. Keeping current camera settings.')}
+  }
+  return {available,start,stop,setFrameRate,diagnostics};
+ }
+ function viewState(state,localPreview,videoStale){
+  const ipad=state.camera_source==='ipad';
+  return {showVeil:!localPreview&&(!!state.stale||videoStale),
+   needsCamera:ipad&&!!state.stale&&!localPreview&&!state.camera_connected,
+   waiting:ipad&&!!state.stale&&(localPreview||!!state.camera_connected)};
+ }
+ return {createCamera,viewState,monitorPreview};
+});
+</script>
+<script id="guest-experience">
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.GuestExperience=factory()})(globalThis,function(){
+ const directions={MOVE_LEFT:['←','A little left'],MOVE_RIGHT:['→','A little right'],MOVE_UP:['↑','A little higher'],MOVE_DOWN:['↓','A little lower'],MOVE_CLOSER:['↙','Come closer'],MOVE_FARTHER:['↗','A step back']};
+ function holding(s){return !!(s&&s.communication&&s.communication.recoverable===true&&['waiting','ready'].includes(s.communication.status))}
+ function controlled(s){return !!(s&&s.active&&!holding(s)&&s.owner===true&&s.control_fresh===true&&s.runtime&&s.runtime.status==='running'&&s.runtime.reason==='none')}
+ function photo(s){return !!(controlled(s)&&s.motion&&s.motion.active===false&&s.photo_ready===true&&s.photo_latched===true)}
+ function motion(s){
+  const m=s&&s.motion,f=s&&s.feedback;
+  if(!controlled(s)||!m||m.active!==true||m.fresh!==true||!directions[m.cue]
+      ||!['moving','returning','settling'].includes(m.phase)||!Number.isSafeInteger(m.action_id)||m.action_id<=0
+      ||!Number.isFinite(m.progress)||m.progress<0||m.progress>1
+      ||!Number.isFinite(m.sample_age_ms)||m.sample_age_ms<0||m.sample_age_ms>300
+      ||!f||f.gesture_id!==m.action_id||!Number.isFinite(f.intensity)||f.intensity<0||f.intensity>1)return null;
+  const edge={MOVE_LEFT:'left',MOVE_RIGHT:'right',MOVE_UP:'top',MOVE_DOWN:'bottom',MOVE_CLOSER:'all',MOVE_FARTHER:'all'}[m.cue];
+  return f.edge===edge&&f.tone==='red'?m:null;
+ }
+ function signal(s,legacy=s&&s.feedback){
+  if(s&&Object.prototype.hasOwnProperty.call(s,'motion')){
+   if(motion(s))return s.feedback;
+   if(photo(s))
+    return {edge:'all',tone:'green',intensity:1,gesture_id:'photo:'+String(s.control&&s.control.epoch)};
+   return null;
+  }
+  return s&&s.active&&s.tracking&&!s.stale&&s.phase!=='SETTLING'?legacy:null;
+ }
+ function present(s,stopped=false){
+  let icon='◎',title='Come as you are',caption='';const d=s.dialogue||{};
+  const runtime=s.runtime||{};
+  if(runtime.status==='fault'){icon='Ⅱ';title='Robot paused';caption=runtime.reason==='reference'?'Return the robot to its start position before trying again.':runtime.reason==='speed'?'Speed protection stopped the robot. Staff check needed.':runtime.reason==='control'?'Control link interrupted. Staff check needed.':runtime.reason==='camera'?'Camera link interrupted. Check the robot, then tap Start.':'Check the robot and connection, then tap Start.'}
+  else if(holding(s)){icon='Ⅱ';title='Reconnecting';caption='One moment. We will continue shortly.'}
+  else if(runtime.status==='waiting_start'&&!s.active){caption='Tap Start to begin.'}
+  else if(s.active&&s.phase==='PHYSICAL_PREVIEW'){icon='Ⅱ';title='Robot position preview';caption='Staff are checking one position at a time.'}
+  else if(s.active&&s.phase==='INTRO'){icon='◎';title='Curious to meet you';caption='Come into view.'}
+  else if(s.active&&s.phase==='INTRO_UNAVAILABLE'){icon='Ⅱ';title='Opening gesture unavailable';caption='Tap Start to retry, or New target to continue.'}
+  else if(motion(s)){[icon,title]=directions[s.motion.cue]}
+  else if(photo(s)){icon='✓';title='Get ready for your photo'}
+  else if(s.stale){icon='Ⅱ';title='One moment'}
+  else if(s.phase==='PHYSICAL_REFERENCE_HOLD'&&s.active&&s.control_fresh===true&&runtime.status==='running'&&runtime.reason==='none'){icon='◎';title='One moment'}
+  else if(s.phase==='PHYSICAL_REFERENCE_HOLD'){icon='Ⅱ';title='Reference check needed';caption='Staff: check the robot position.'}
+  else if(!s.active){if(stopped){icon='✓';title='Thank you'}else caption='Tap Start to begin.'}
+  else if(s.phase==='AGENT_DONE'){icon='✓';title='Your portrait';caption='Stay as you are.'}
+  else if(s.ready){icon='✓';title='Get ready for your photo';caption=''}
+  else if(s.phase==='AI_BUDGET_REACHED'){icon='Ⅱ';title='Taking a break';caption='Please ask our host.'}
+  else if(s.phase&&s.phase.startsWith('AI_')&&!['AI_ENTRY_ACK','AI_THINKING','AI_WAITING_FOR_STILLNESS','AI_COOLDOWN','AI_REPLAN','AI_PLAN_LOCKED'].includes(s.phase)){icon='↻';title='Try a new view';caption='Show your head and shoulders, then tap New target.'}
+  else if(s.phase==='AI_WAITING_FOR_STILLNESS'){icon='◎';title='Hold briefly';caption='Choosing one reference view.'}
+  else if(s.phase&&s.phase.startsWith('AI_')){icon='Ⅱ';title='One moment'}
+  else if((s.phase==='AGENT_PRESENCE_WAIT'||s.phase==='TRACKING_LOST')&&!d.speech){title='Come into view'}
+  else if(s.direction&&directions[s.direction]){[icon,title]=directions[s.direction]}
+  else if(s.phase==='AGENT_THINKING'){title='Finding your frame'}
+  else if(s.phase==='SETTLING'){title='Stay there'}
+  else {title='Your choice';const text=d.speech||'';if(!/[\u3400-\u9fff]/.test(text)){const words=text.trim().split(/\s+/);caption=words.slice(0,12).join(' ')+(words.length>12?'…':'')}}
+  return {icon,title,caption};
+ }
+ function fit(w,h,maxW,maxH){const scale=Math.min(maxW/Math.max(1,w),maxH/Math.max(1,h));return {width:w*scale,height:h*scale}}
+ async function fullscreen(doc){
+  try{
+   if(doc.fullscreenElement||doc.webkitFullscreenElement){const exit=doc.exitFullscreen||doc.webkitExitFullscreen;if(!exit)return 'unsupported';await exit.call(doc);return 'exited'}
+   const root=doc.documentElement,enter=root.requestFullscreen||root.webkitRequestFullscreen;
+   if(!enter)return 'unsupported';await enter.call(root);return 'entered';
+  }catch{return 'denied'}
+ }
+  return {present,fit,fullscreen,motion,photo,signal};
+});
+</script>
+<script id="guest-direction-audio">
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.GuestDirectionAudio=factory()})(globalThis,function(){
+ const waitingCues=['WAIT_MOMENT','WAIT_SECOND','WAIT_FRAME','WAIT_ANGLE','WAIT_LOOK','WAIT_SPOT'];
+ const countdownCues={3:'COUNTDOWN_THREE',2:'COUNTDOWN_TWO',1:'COUNTDOWN_ONE'};
+ const cues=['MOVE_LEFT','MOVE_RIGHT','MOVE_UP','MOVE_DOWN','MOVE_CLOSER','MOVE_FARTHER','ARRIVED',
+  'INTRO_HELLO',...waitingCues,...Object.values(countdownCues)];
+ const waitingPhases=new Set(['AI_ENTRY_ACK','AI_THINKING','AI_WAITING_FOR_STILLNESS','AI_COOLDOWN','PHYSICAL_REFERENCE_HOLD']);
+ function create(env,{fetchClip,motion=()=>null,photo=()=>false,onStatus=()=>{}}={}){
+  const raw=new Map(),buffers=new Map(),jobs=new Map(),failed=new Set(),seen=new Set();
+  let context=null,primed=false,enabled=true,unlocked=false,current=null,currentKey=null,currentCue=null,identity=null,lastAction=0,generation=0,expiry=null,error=0,errors=0,played=0;
+  let currentKind=null,waiting=null,waitingEpisode=0,lastWaitingCue=null;
+  let photoStep=null,photoRevision=0,lastObserved=null,lastObservedAt=0;
+  const now=()=>env.performance.now();
+  function status(){return {enabled,unlocked:!!(unlocked&&context&&context.state==='running'),playing:!!current,error}}
+  function notify(){try{onStatus(status())}catch{}}
+  function problem(code){error=code;errors=Math.min(240,errors+1);notify()}
+  function stopPlayback(){generation++;if(expiry!==null)env.clearTimeout(expiry);expiry=null;const old=current;current=null;currentKey=null;currentCue=null;currentKind=null;if(old){try{old.stop()}catch{}try{old.disconnect()}catch{}}notify()}
+  function clear(){waiting=null;stopPlayback()}
+  function decode(bytes){return new Promise((resolve,reject)=>{try{const promise=context.decodeAudioData(bytes.slice(0),resolve,reject);if(promise&&promise.then)promise.then(resolve,reject)}catch(e){reject(e)}})}
+  function ensure(cue){
+   if(buffers.has(cue))return Promise.resolve(buffers.get(cue));if(jobs.has(cue))return jobs.get(cue);if(failed.has(cue))return Promise.resolve(null);
+   const data=raw.has(cue)?Promise.resolve(raw.get(cue)):Promise.resolve().then(()=>fetchClip(cue)).then(bytes=>{
+    if(!bytes||!Number.isSafeInteger(bytes.byteLength)||bytes.byteLength<=0||bytes.byteLength>1024*1024||typeof bytes.slice!=='function')throw Error('Invalid cue audio');raw.set(cue,bytes);return bytes;
+   });
+   const pending=data.then(bytes=>context?decode(bytes).then(buffer=>{buffers.set(cue,buffer);return buffer}):null)
+    .catch(()=>{failed.add(cue);problem(2);return null}).finally(()=>jobs.delete(cue));
+   jobs.set(cue,pending);return pending;
+  }
+  function preload(){return Promise.allSettled(cues.map(ensure))}
+  function createContext(){const Audio=env.AudioContext||env.webkitAudioContext;if(!Audio)throw Error('WebAudio unavailable');if(!context)context=new Audio();return context}
+  function prepare(){
+   // 首次创建音频对象和解码可能推迟相机回调。打开相机前先完成准备且不播放，页面重载时也如此。
+   try{createContext();return preload().then(()=>true)}catch{problem(3);return Promise.resolve(false)}
+  }
+  function unlock(){
+   if(!enabled)return Promise.resolve(false);
+   failed.clear();error=0;
+   try{
+    createContext();
+    if(!primed){const silent=context.createBufferSource();silent.buffer=context.createBuffer(1,1,context.sampleRate||22050);silent.connect(context.destination);silent.onended=()=>{try{silent.disconnect()}catch{}};silent.start(0);primed=true}
+    // 在用户点击开始或声音按钮的原始事件中恢复音频，不等网络请求返回。获取和解码回调只缓存素材，不播放声音。
+    const resumed=context.resume();
+    return Promise.resolve(resumed).then(()=>{unlocked=context.state==='running';if(!unlocked){problem(1);return false}notify();return preload().then(()=>true)},()=>{unlocked=false;problem(1);return false});
+   }catch{unlocked=false;problem(1);return Promise.resolve(false)}
+  }
+  function eligible(s){
+   if(!s||s.active!==true||s.owner!==true||s.control_fresh!==true||s.stale===true)return false;
+   if(s.communication&&['waiting','ready'].includes(s.communication.status))return false;
+   const status=s.runtime&&s.runtime.status;
+   return status==='running'||status==='none'||(s.phase==='INTRO'&&status==='starting');
+  }
+  function startClip(selection){
+   if(!unlocked||!context||context.state!=='running')return false;
+   const buffer=buffers.get(selection.cue);
+   if(!buffer){ensure(selection.cue);return false}
+   seen.add(selection.key);
+   if(seen.size>64)seen.delete(seen.values().next().value);
+   try{
+    const source=context.createBufferSource(),issued=generation;
+    source.buffer=buffer;source.connect(context.destination);
+    current=source;currentKey=selection.key;currentCue=selection.cue;currentKind=selection.kind;
+    source.onended=()=>{
+     if(generation!==issued||current!==source)return;
+     current=null;currentKey=null;currentCue=null;currentKind=null;
+     try{source.disconnect()}catch{}
+     notify();
+    };
+    source.start(0);played=Math.min(240,played+1);error=0;notify();return true;
+   }catch{stopPlayback();problem(4);return false}
+  }
+  function selectWaiting(timestamp){
+   if(!waiting)waiting={episode:++waitingEpisode,nextAt:timestamp+1500,count:0};
+   if(currentKind==='waiting')return {cue:currentCue,key:currentKey,kind:'waiting',mayStart:false};
+   if(waiting.count>=3||timestamp<waiting.nextAt)return null;
+   const choices=waitingCues.filter(cue=>cue!==lastWaitingCue);
+   const random=(env.Math||Math).random();
+   const index=Number.isFinite(random)?Math.min(choices.length-1,Math.max(0,Math.floor(random*choices.length))):0;
+   return {cue:choices[index],key:identity+':wait:'+waiting.episode+':'+waiting.count,kind:'waiting',mayStart:true};
+  }
+  function renderAudio(s,received=true){
+   const timestamp=now();
+   if(received){lastObserved=s;lastObservedAt=timestamp}
+   const age=timestamp-lastObservedAt;
+   if(age<0||age>=350){clear();return}
+   if(!enabled||(env.document&&env.document.hidden)||!eligible(s)){clear();return}
+   const control=s.control;
+   if(!control||typeof control.instance!=='string'||!control.instance||!Number.isSafeInteger(control.epoch)||control.epoch<0){clear();return}
+   const nextIdentity=JSON.stringify([control.instance,control.epoch]);
+   if(nextIdentity!==identity){clear();identity=nextIdentity;lastAction=0;photoStep=null;seen.clear()}
+   const measured=motion(s);
+   if(s.motion&&s.motion.active===true&&!measured){clear();return}
+   let selection=null;
+   if(measured){
+    waiting=null;
+    if(measured.started!==true||measured.action_id<lastAction){clear();return}
+    lastAction=Math.max(lastAction,measured.action_id);
+    selection={cue:measured.cue,key:identity+':action:'+measured.action_id,kind:'direction',
+     mayStart:measured.phase==='moving'&&measured.progress>0};
+   }else if(photo(s)){
+    waiting=null;
+    if(photoStep&&photoStep.name==='countdown'){
+     selection={cue:countdownCues[photoStep.number],key:identity+':count:'+photoStep.revision,kind:'countdown',mayStart:true};
+    }else if(!photoStep||photoStep.name==='intro'){
+     selection={cue:'ARRIVED',key:identity+':photo',kind:'arrival',mayStart:true};
+    }
+   }else if(s.phase==='INTRO'){
+    waiting=null;
+    selection={cue:'INTRO_HELLO',key:identity+':intro',kind:'greeting',mayStart:true};
+   }else if(waitingPhases.has(s.phase)){
+    selection=selectWaiting(timestamp);
+   }else{
+    waiting=null;
+   }
+   if(!selection||!cues.includes(selection.cue)){stopPlayback();return}
+   if(current&&(selection.key!==currentKey||selection.cue!==currentCue))stopPlayback();
+   if(expiry!==null)env.clearTimeout(expiry);
+   const stamp=generation;
+   expiry=env.setTimeout(()=>{if(generation===stamp)clear()},350-age);
+   if(seen.has(selection.key)||!selection.mayStart)return;
+   if(startClip(selection)&&selection.kind==='waiting'){
+    waiting.count++;waiting.nextAt=timestamp+8000;lastWaitingCue=selection.cue;
+   }
+  }
+  function photoStage(name,number=null){
+   if(photoStep&&photoStep.name===name&&photoStep.number===number)return;
+   photoStep={name,number,revision:++photoRevision};
+   if(lastObserved&&now()-lastObservedAt<350)renderAudio(lastObserved,false);
+   else stopPlayback();
+  }
+  return {prepare,preload,unlock,render:renderAudio,photoStage,clear,status,setEnabled(value){enabled=!!value;if(!enabled)clear();notify()},
+   diagnostics(){return {direction_audio_enabled:enabled,direction_audio_unlocked:status().unlocked,direction_audio_playing:!!current,direction_audio_played:played,direction_audio_errors:errors,direction_audio_error:error}}};
+ }
+ return {create};
+});
+</script>
+<script id="guest-control-heartbeat">
+(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.GuestControlHeartbeat=api})(typeof globalThis!=='undefined'?globalThis:this,function(){
+ function create(env,send,onExpired){
+  let generation=0,active=false,timer=null,identity=null,sequence=0,lastTick=0;
+  let recoveryEnabled=false,recoveryDeadline=null,lastAccepted=0;
+  const pending=new Set();
+  let firstExpiry=0,maxGap=0,lastRtt=0,maxRtt=0,maxPending=0,sentCount=0,settledCount=0,abortCount=0;
+  const expiryCodes={server_rejected:1,page_hidden:2,clock_invalid:3,scheduler_stalled:4,sequence_exhausted:5,recovery_expired:6};
+  const bounded=(value,limit)=>Number.isFinite(value)?Math.min(limit,Math.max(0,Math.round(value*1000)/1000)):0;
+  function abort(request){
+   if(!request.controller.signal.aborted)abortCount=Math.min(240,abortCount+1);
+   request.controller.abort();
+  }
+  function stop(){
+   generation++;active=false;if(timer!==null)env.clearTimeout(timer);timer=null;
+   recoveryEnabled=false;recoveryDeadline=null;
+   for(const request of pending){env.clearTimeout(request.timer);abort(request)}
+   pending.clear();
+  }
+  function expire(reason){if(!active)return;if(!firstExpiry)firstExpiry=expiryCodes[reason]||0;stop();if(onExpired)onExpired(reason)}
+  function configure(value,control){
+   if(!active||!identity||!control||control.instance!==identity.instance||control.epoch!==identity.epoch||
+      !value||!['healthy','waiting','ready'].includes(value.status)||typeof value.recoverable!=='boolean'||
+      !Number.isFinite(value.remaining_ms)||value.remaining_ms<0||value.remaining_ms>3000)return false;
+   if(value.recoverable!==true)return false;
+   recoveryEnabled=true;
+   if(value.status==='healthy')recoveryDeadline=null;
+   else{const deadline=env.performance.now()+value.remaining_ms;recoveryDeadline=recoveryDeadline===null?deadline:Math.min(recoveryDeadline,deadline)}
+   return true;
+  }
+  function settle(request,result,error){
+   env.clearTimeout(request.timer);pending.delete(request);
+   settledCount=Math.min(240,settledCount+1);
+   lastRtt=bounded(env.performance.now()-request.sentAt,10000);maxRtt=Math.max(maxRtt,lastRtt);
+   if(!active||request.generation!==generation||request.controller.signal.aborted)return;
+   if((result&&result.ok===false&&result.fatal===true)||(error&&error.fatal===true))expire('server_rejected');
+   else if(result&&result.ok===true&&result.accepted===true){lastAccepted=env.performance.now();configure(result.communication,identity)}
+  }
+  function tick(){
+   timer=null;if(!active)return;
+   if(env.document.hidden!==false){expire('page_hidden');return}
+   const now=env.performance.now(),gap=now-lastTick;
+   if(Number.isFinite(gap)&&gap>=0)maxGap=Math.max(maxGap,bounded(gap,10000));
+   if(!Number.isFinite(now)||gap<0){expire('clock_invalid');return}
+   if(gap>300&&!recoveryEnabled){expire('scheduler_stalled');return}
+   if(recoveryEnabled){
+    if(recoveryDeadline===null&&now-lastAccepted>300)recoveryDeadline=lastAccepted+3300;
+    if(recoveryDeadline!==null&&now>=recoveryDeadline){expire('recovery_expired');return}
+   }
+   lastTick=now;
+   // 前台页面负责心跳节奏，状态轮询和回复不控制时序。计时器延迟时只发送一次，不补发遗漏心跳。
+   timer=env.setTimeout(tick,50);
+   if(pending.size>=3)return;
+   if(sequence>=2147483647){expire('sequence_exhausted');return}
+   const request={generation,controller:new env.AbortController(),timer:null,sentAt:now};
+   pending.add(request);
+   sentCount=Math.min(240,sentCount+1);maxPending=Math.max(maxPending,pending.size);
+   request.timer=env.setTimeout(()=>abort(request),150);
+   let result;
+   try{result=send({instance:identity.instance,epoch:identity.epoch,sequence:++sequence},request.controller.signal)}
+   catch(error){settle(request,null,error);return}
+   // 即使传输层忽略取消请求，也要保留槽位到请求真正结束，防止未完成请求无限堆积。
+   Promise.resolve(result).then(value=>settle(request,value,null),error=>settle(request,null,error));
+  }
+  function start(value){
+   stop();
+   if(!value||typeof value.instance!=='string'||!value.instance||!Number.isSafeInteger(value.epoch)||value.epoch<0||
+      (value.sequence!==undefined&&(!Number.isSafeInteger(value.sequence)||value.sequence<0||value.sequence>2147483647))||env.document.hidden!==false)return false;
+   const now=env.performance.now();if(!Number.isFinite(now))return false;
+   identity={instance:value.instance,epoch:value.epoch};sequence=value.sequence===undefined?0:value.sequence;
+   lastTick=lastAccepted=now;active=true;tick();return active;
+  }
+  function diagnostics(){
+   return Object.freeze({control_hb_version:1,control_hb_expiry:firstExpiry,
+    control_hb_max_gap_ms:maxGap,control_hb_last_rtt_ms:lastRtt,control_hb_max_rtt_ms:maxRtt,
+    control_hb_pending:Math.min(3,pending.size),control_hb_max_pending:Math.min(3,maxPending),
+    control_hb_sent:sentCount,control_hb_settled:settledCount,control_hb_aborted:abortCount});
+  }
+  env.document.addEventListener('visibilitychange',()=>{if(env.document.hidden!==false)expire('page_hidden')});
+  return {start,stop,configure,diagnostics};
+ }
+ return {create};
+});
+</script>
+<script>
+const VISUAL_ONLY=true;document.body.classList.add('visual-only');
+const token=new URLSearchParams(location.search).get('key')||'',client=Date.now().toString(36)+Math.random().toString(36).slice(2),headers={'X-Guest-Token':token,'X-Guest-Client':client};
+const $=id=>document.getElementById(id);
+ const directionAudio=GuestDirectionAudio.create(globalThis,{
+  fetchClip:async cue=>{const abort=new AbortController(),timer=setTimeout(()=>abort.abort(),2500);try{const response=await fetch('/cue-audio?cue='+encodeURIComponent(cue),{headers,cache:'force-cache',signal:abort.signal});if(!response.ok)throw Error('Cue audio unavailable');return await response.arrayBuffer()}finally{clearTimeout(timer)}},
+  motion:GuestExperience.motion,photo:GuestExperience.photo,
+  onStatus:s=>{const button=$('direction-sound'),note=$('direction-audio-status');button.textContent=s.error?'Sound: retry':s.enabled?'Sound: on':'Sound: off';button.setAttribute('aria-pressed',String(s.enabled));button.setAttribute('aria-label',s.error?'Retry spoken directions':s.enabled?'Mute spoken directions':'Enable spoken directions');note.hidden=!s.error;note.textContent=s.error===1?'Tap Sound to enable spoken directions.':s.error?'Sound unavailable. Follow the arm and lights.':''}
+ });
+ GuestExperience.directionAudio=directionAudio;directionAudio.prepare();
+const cueLight=GuestPainter.createFeedbackAnimator($('cue-frame'),globalThis);let stateEpoch=0,lastStateAt=0,actionPending=false;
+let controlActionEpoch=0;
+const controlHeartbeat=GuestControlHeartbeat.create(globalThis,async(body,signal)=>{
+ const response=await fetch('/control-heartbeat',{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify(body),cache:'no-store',signal});
+ if(!response.ok)return {ok:false,fatal:response.status===409||response.status===403};
+ return await response.json();
+ },()=>{cueLight.clear();globalThis.GuestExperience?.directionAudio?.clear()});
+let lastState=null,frameReady=false,lastPaintAt=0,videoStopped=false,frameBusy=false,visitorStopped=false,frameSequence=0,shownFrames=0,fps=0,fpsSince=performance.now(),localPreview=null,starting=false,submittedMessages=0,heardUntil=0,lastHeardText='',heardReplyId=-1,microphoneSession=Promise.resolve();
+const voice=GuestDialogue.createVoice(globalThis,text=>{lastHeardText=text;heardReplyId=(lastState&&lastState.dialogue||{}).id;if(!lastState||lastState.stale)return;if(GuestDialogue.isStop(text))action('stop',false,4);else microphoneSession.then(()=>{if(lastState&&lastState.active&&lastState.owner)sendMessage(text)})},text=>{if(text==='Heard you.')heardUntil=performance.now()+6000;$('voice-status').textContent=text;$('listening').textContent=text==='Listening'?'LISTENING':text==='Speaking'?'SPEAKING':''});
+const recorder=GuestRecorder.create(globalThis,async(blob,language,signal)=>{
+ const timeout=setTimeout(()=>transcriptionAbort.abort(),45000),transcriptionAbort=new AbortController(),abort=()=>transcriptionAbort.abort();signal.addEventListener('abort',abort,{once:true});
+ try{const r=await fetch('/transcribe',{method:'POST',headers:{...headers,'Content-Type':'application/octet-stream','X-Speech-Language':language},body:blob,signal:transcriptionAbort.signal});if(!r.ok)throw Error('Local speech unavailable');return await r.json()}finally{clearTimeout(timeout);signal.removeEventListener('abort',abort)}
+},text=>{lastHeardText=text;heardReplyId=(lastState&&lastState.dialogue||{}).id;heardUntil=performance.now()+6000;if(GuestDialogue.isStop(text))action('stop',false,4);else microphoneSession.then(()=>{if(lastState&&lastState.active&&lastState.owner)sendMessage(text)})},text=>{$('voice-status').textContent=text;updateVoiceControls()});
+async function request(path,body){const abort=new AbortController(),timer=setTimeout(()=>abort.abort(),2500);try{const r=await fetch(path,{method:body===undefined?'GET':'POST',headers:{...headers,'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body),cache:'no-store',signal:abort.signal});if(!r.ok)throw Error('Request unavailable');return await r.json()}finally{clearTimeout(timer)}}
+async function cameraRequest(path,body,extra,signal){
+ if(path==='/camera/stop'&&body&&!extra)body={...body,control:lastState&&lastState.control};
+ const control=new AbortController();let abortKind=0,status=0,httpRefusal=false;
+ const cancel=()=>{if(!abortKind)abortKind=3;control.abort()};if(signal){if(signal.aborted)cancel();else signal.addEventListener('abort',cancel,{once:true})}
+ const timeout=setTimeout(()=>{if(!abortKind)abortKind=2;control.abort()},path==='/photo'?10000:2500);
+ try{const r=await fetch(path,{method:'POST',headers:{...headers,'Content-Type':'application/json',...(extra||{})},body:extra?body:JSON.stringify(body),signal:control.signal,keepalive:path==='/camera/stop'});if(!r.ok){httpRefusal=true;status=Number.isInteger(r.status)&&r.status>=0&&r.status<=599?r.status:0;throw Error('Camera request failed')}return await r.json()}
+ catch(error){const classified=Error('Camera request failed');if(error&&error.name==='AbortError')classified.name='AbortError';classified.camera_error_kind=httpRefusal?1:abortKind||4;classified.camera_http_status=status;throw classified}
+ finally{clearTimeout(timeout);if(signal)signal.removeEventListener('abort',cancel)}
+}
+let photoObjectURL=null,photoUpload=null,photoExpiry=null;
+const photoFlow=GuestPhoto.createFlow({
+ introDelayMs:1800,
+ canStart:()=>GuestPhoto.canStart(lastState,localPreview,document.hidden),
+ canCapture:()=>GuestPhoto.canStart(lastState,localPreview,document.hidden),
+ stage:(step,number)=>{
+  directionAudio.photoStage(step,number);
+  $('photo-countdown').hidden=false;
+  $('photo-caption').textContent=step==='intro'?'This is your best position':step==='paused'?'Camera paused. Please wait.':'Get ready for your photo';
+  $('photo-number').textContent=number===null?'':String(number);
+ },
+ capture:()=>GuestPhoto.captureVideo(localPreview,globalThis,cameraRotation(localPreview)),
+ show:blob=>{
+  directionAudio.photoStage('result');
+  $('photo-countdown').hidden=true;
+  if(photoObjectURL)URL.revokeObjectURL(photoObjectURL);
+  photoObjectURL=URL.createObjectURL(blob);$('photo-preview').src=photoObjectURL;
+  $('photo-qr').hidden=true;$('photo-retry').hidden=true;$('photo-share-status').textContent='Preparing your QR code…';$('photo-result').hidden=false;
+ },
+ upload:blob=>{photoUpload=new AbortController();return cameraRequest('/photo',blob,{'Content-Type':'image/jpeg'},photoUpload.signal)},
+ share:info=>{
+  if(!info||typeof info.qr_data_url!=='string'||!/^data:image\/png;base64,[A-Za-z0-9+/=]+$/.test(info.qr_data_url)){
+   $('photo-share-status').textContent='QR code unavailable';$('photo-retry').hidden=false;return;
+  }
+  $('photo-qr').src=info.qr_data_url;$('photo-qr').hidden=false;$('photo-retry').hidden=true;
+  $('photo-share-status').textContent='Scan to download · Available for 5 minutes';
+  if(photoExpiry!==null)clearTimeout(photoExpiry);
+  const seconds=Number.isFinite(info.expires_seconds)?Math.max(0,Math.min(300,info.expires_seconds)):300;
+  photoExpiry=setTimeout(()=>{$('photo-qr').hidden=true;$('photo-share-status').textContent='QR code expired';photoExpiry=null},seconds*1000);
+ },
+ error:stage=>{directionAudio.photoStage('paused');if(stage==='capture'){$('photo-countdown').hidden=false;$('photo-caption').textContent='Camera unavailable. Tap New target to try again.';$('photo-number').textContent=''}else {$('photo-share-status').textContent=stage==='notready'?'Reconnect the camera and retry.':'Your portrait is ready, but the QR code is unavailable.';$('photo-retry').hidden=false}},
+ cancelAsync:()=>{if(photoUpload)photoUpload.abort();photoUpload=null;if(photoExpiry!==null)clearTimeout(photoExpiry);photoExpiry=null},
+ hide:()=>{
+  directionAudio.photoStage('reset');
+  $('photo-countdown').hidden=true;$('photo-result').hidden=true;$('photo-qr').hidden=true;$('photo-retry').hidden=true;
+  $('photo-qr').removeAttribute('src');$('photo-preview').removeAttribute('src');
+  if(photoObjectURL)URL.revokeObjectURL(photoObjectURL);photoObjectURL=null;
+ }
+});
+$('photo-retry').onclick=()=>{if(photoFlow.retry()){$('photo-retry').hidden=true;$('photo-share-status').textContent='Preparing your QR code again…'}};
+let orientationChoice='auto',lastCameraRotation=null;
+try{const saved=localStorage.getItem('leica-camera-orientation');if(['auto','0','90','180','270'].includes(saved))orientationChoice=saved}catch{}
+$('camera-orientation').value=orientationChoice;
+function cameraRotation(video){return GuestCameraGeometry.rotation(video,globalThis,orientationChoice)}
+function fitImage(){
+ const stage=$('image-stage'),w=(localPreview?localPreview.videoWidth:$('camera').width)||1280,h=(localPreview?localPreview.videoHeight:$('camera').height)||720;
+ const rotation=localPreview?cameraRotation(localPreview):0,p=GuestCameraGeometry.plan(w,h,rotation);
+ const size=GuestExperience.fit(p.width,p.height,stage.clientWidth,stage.clientHeight);
+ $('viewport').style.width=size.width+'px';$('viewport').style.height=size.height+'px';
+ if(localPreview){
+  const scale=size.width/p.width;
+  localPreview.style.width=w*scale+'px';localPreview.style.height=h*scale+'px';
+  localPreview.style.transform='translate(-50%,-50%) scaleX(-1) rotate('+rotation+'deg)';
+  if(localPreview.videoWidth&&localPreview.videoHeight){
+   lastCameraRotation=rotation;
+  }
+ }
+}
+function changeCameraOrientation(value){
+ orientationChoice=String(value);$('camera-orientation').value=orientationChoice;
+ try{localStorage.setItem('leica-camera-orientation',orientationChoice)}catch{}
+ fitImage();
+}
+$('camera-orientation').onchange=()=>changeCameraOrientation($('camera-orientation').value);
+$('rotate-camera').onclick=()=>changeCameraOrientation((cameraRotation(localPreview)+90)%360);
+const ipadCamera=IPadCamera.createCamera(globalThis,cameraRequest,text=>$('camera-status').textContent=text,running=>{$('camera-on').disabled=running;$('camera-off').disabled=!running},video=>{
+ localPreview=video;lastCameraRotation=null;$('camera').hidden=!!video;
+ if(video){$('viewport').insertBefore(video,$('crop'));video.addEventListener('resize',fitImage)}
+ fitImage();if(lastState&&performance.now()-lastStateAt<=350&&!actionPending)render(lastState);
+},()=>({...voice.diagnostics(),...recorder.diagnostics(),...controlHeartbeat.diagnostics(),...directionAudio.diagnostics(),voice_submits:Math.min(240,submittedMessages),
+  ...GuestPhoto.diagnostics(lastState,localPreview,document.hidden,photoFlow)}),cameraRotation);
+window.addEventListener('resize',fitImage);window.addEventListener('orientationchange',fitImage);fitImage();
+$('preview-rate').onchange=()=>ipadCamera.setFrameRate(Number($('preview-rate').value));
+setInterval(()=>{if(!localPreview)return;const d=ipadCamera.diagnostics();$('camera-metrics').textContent='Preview '+(d.preview_fps||0)+' fps · received '+((lastState&&lastState.server_fps)||0)+' fps'},1000);
+async function startCamera(){await directionAudio.prepare();return ipadCamera.start()}
+$('camera-on').onclick=startCamera;$('camera-off').onclick=()=>{action('stop',false,2);ipadCamera.stop('Camera closed.',2)};
+function copy(a,t,d=''){$('visitor-status').hidden=false;$('arrow').textContent=a;$('title').textContent=t;$('detail').textContent=d}
+ function offline(){recorder.cancel();voice.cancel(15);cueLight.clear();globalThis.GuestExperience?.directionAudio?.clear();
+ if(!visitorStopped&&lastState&&lastState.communication&&lastState.communication.recoverable===true)
+  lastState={...lastState,stale:true,feedback:null,motion:{active:false,fresh:false},runtime:{status:'holding',reason:'communication'},communication:{...lastState.communication,status:'waiting'}};
+ else lastState=null;
+ if(lastState)photoFlow.hold();photoFlow.update();$('listening').textContent='';$('crop').style.display='none';$('veil').hidden=!!localPreview;$('veil').textContent='One moment';copy('Ⅱ',lastState?'Reconnecting':'One moment');$('diagnostics').textContent=lastState?'Connection interrupted. Waiting to continue this encounter.':'Connection interrupted. Staff: reconnect, then prepare the display.'}
+function render(s){
+  if(document.hidden||actionPending){cueLight.clear();globalThis.GuestExperience?.directionAudio?.clear();return}
+ if(s.communication&&s.communication.recoverable===true&&['waiting','ready'].includes(s.communication.status))photoFlow.hold();
+ lastState=s;lastStateAt=performance.now();if(recorder.status().busy){voice.skipReply(s);if(!starting&&(!s.active||s.owner===false))recorder.cancel()}else if(!VISUAL_ONLY)voice.render(starting?{...s,active:true,owner:true,dialogue:{}}:s);updateVoiceControls();document.body.classList.toggle('finished',s.phase==='AGENT_DONE'||!!s.ready);
+ photoFlow.update();
+  globalThis.GuestExperience?.directionAudio?.render(s);
+ // 构图几何数据只在电脑端操作员视图显示。
+ $('crop').hidden=true;
+ const native=Object.prototype.hasOwnProperty.call(s,'motion'),moving=GuestExperience.motion(s);
+ if(native||localPreview||!s.active||!s.tracking||s.stale||s.phase==='SETTLING')cueLight.set(GuestExperience.signal(s));
+ const videoStale=!localPreview&&(!frameReady||performance.now()-lastPaintAt>1500),view=IPadCamera.viewState(s,!!localPreview,videoStale);
+ $('veil').hidden=!!moving||!view.showVeil;$('veil').textContent='One moment';
+ if(!native&&frameReady&&videoStale&&s.active&&s.owner&&!videoStopped){videoStopped=true;action('stop',false,10)}
+ const p=GuestExperience.present({...s,stale:s.stale||videoStale},visitorStopped);if(s.active&&lastHeardText&&performance.now()<heardUntil&&(s.dialogue||{}).id===heardReplyId){p.title='Heard you';p.caption='“'+lastHeardText.split(/\s+/).slice(0,12).join(' ')+'”'}copy(p.icon,p.title,p.caption);
+ $('visitor-status').hidden=!!(!moving&&(s.runtime||{}).status!=='fault'&&s.active&&!s.stale&&!videoStale&&s.tracking&&s.composition&&!['INTRO','INTRO_UNAVAILABLE'].includes(s.phase));
+ $('diagnostics').textContent=[s.phase||'Connecting',s.active?'Encounter active':'Encounter paused',s.owner?'This display owns the encounter':'Not the active display','Model calls: '+((s.dialogue||{}).requests||0)+'/20',s.stale?'Camera stale':'Camera fresh'].join('\n');
+}
+ async function state(){const generation=stateEpoch,started=performance.now();try{const s=await request('/state');if(generation!==stateEpoch||document.hidden||actionPending||performance.now()-started>350){cueLight.clear();globalThis.GuestExperience?.directionAudio?.clear()}else{controlHeartbeat.configure(s.communication,s.control);render(s)}}catch{offline()}finally{setTimeout(state,100)}}
+async function frame(){if(localPreview){setTimeout(frame,250);return}if(frameBusy)return;frameBusy=true;let delay=0;try{const r=await fetch('/frame.jpg?after='+frameSequence,{headers,cache:'no-store'});if(r.status===200&&!localPreview){frameSequence=Number(r.headers.get('X-Frame-Sequence')||frameSequence);await GuestPainter.present($('camera'),await r.blob());if(localPreview)return;fitImage();let signal=null;try{signal=JSON.parse(r.headers.get('X-Frame-Feedback')||'null')}catch{}cueLight.set(!actionPending&&!document.hidden&&performance.now()-lastStateAt<=350?GuestExperience.signal(lastState,signal):null);frameReady=true;videoStopped=false;lastPaintAt=performance.now();shownFrames++;const now=performance.now();if(now-fpsSince>=1000){fps=Math.round(shownFrames*1000/(now-fpsSince));shownFrames=0;fpsSince=now}}else if(r.status!==204)delay=300}catch{delay=300}finally{frameBusy=false;setTimeout(frame,delay)}}
+async function action(name,enter=false,stopOrigin=1){
+ if(actionPending&&name!=='stop')return;
+ if(name==='start'&&lastState&&lastState.active&&lastState.owner&&!lastState.stale&&
+    (lastState.runtime||{}).status!=='fault'){
+  if(enter&&!document.hidden)$('setup').hidden=true;
+  return;
+ }
+  if(name!=='stop'&&!document.hidden)globalThis.GuestExperience?.directionAudio?.unlock();
+ const generation=++controlActionEpoch;
+ controlHeartbeat.stop();
+  stateEpoch++;actionPending=true;photoFlow.reset();recorder.cancel();voice.cancel(({start:16,stop:17,restart:18})[name]);cueLight.clear();globalThis.GuestExperience?.directionAudio?.clear();visitorStopped=name==='stop';starting=name!=='stop';
+ if(lastState)lastState={...lastState,feedback:null,photo_ready:false,photo_latched:false,
+  ...(Object.prototype.hasOwnProperty.call(lastState,'motion')?{motion:{active:false,fresh:false}}:{})};
+ try{
+  if(name!=='stop'&&document.hidden)return;
+  let control=lastState&&lastState.control;
+  if(name!=='stop'){const snapshot=await request('/state');control=snapshot.control}
+  if(generation!==controlActionEpoch||(name!=='stop'&&document.hidden))return;
+  const body={action:name,control_protocol:1,control};
+  if(name!=='stop')body.recovery_window_s=3.0;
+  // 停止来源依次编码为按钮、关闭相机、Esc、语音、页面隐藏、pagehide、视频轨道结束、手动旋转、自动旋转和 JPEG 过期。
+  if(name==='stop')body.stop_origin=Number.isInteger(stopOrigin)&&stopOrigin>=1&&stopOrigin<=10?stopOrigin:0;
+  const result=await request('/action',body);
+  if(generation!==controlActionEpoch)return;
+  if(lastState)lastState={...lastState,control:result.control,communication:result.communication,active:name!=='stop',owner:true};
+  if(name==='stop')copy('✓','Thank you');
+  else if(!document.hidden){
+   if(result.already_active&&(!Number.isSafeInteger(result.control_sequence)||result.control_sequence<0||result.control_sequence>=2147483647))throw Error('Invalid active control sequence');
+   controlHeartbeat.start(result.already_active?{...result.control,sequence:result.control_sequence}:result.control);
+   controlHeartbeat.configure(result.communication,result.control);if(enter)$('setup').hidden=true
+  }
+ }
+ catch{if(generation===controlActionEpoch)offline()}
+ finally{if(generation===controlActionEpoch){starting=false;actionPending=false;stateEpoch++}}
+}
+async function sendMessage(text){voice.cancel(19);cueLight.clear();try{await request('/message',{text});submittedMessages++;$('voice-status').textContent='Heard you.'}catch{offline()}}
+$('prepare').onclick=async()=>{
+ $('prepare').disabled=true;recorder.cancel();voice.cancel(20);
+ try{if(!lastState||lastState.camera_source==='ipad')await startCamera();
+  if(lastState&&lastState.active&&lastState.owner){$('setup').hidden=true;return}
+  if((!lastState||lastState.camera_source==='ipad')&&!localPreview)return;
+  $('setup').hidden=true;if(lastState)render(lastState);
+ }finally{$('prepare').disabled=false}
+};
+function updateVoiceControls(){const status=voice.status(),mic=recorder.status();$('listening').textContent=mic.processing?'UNDERSTANDING':mic.listening?('LISTENING · '+mic.level):mic.starting?'MIC STARTING':status.speaking?'SPEAKING':status.outputPending?'PREPARING REPLY AUDIO':status.speakerError?'REPLY ON SCREEN':performance.now()<heardUntil?'HEARD YOU':'';$('visitor-mic').setAttribute('aria-pressed',String(mic.listening||mic.starting));$('visitor-mic').setAttribute('aria-label',mic.listening?'Finish speaking':'Turn microphone on');$('mic-label').textContent=mic.processing?'Thinking':mic.listening||mic.starting?'Mic on':'Mic off';$('sound').textContent=status.sound?'Voice: on':'Voice: off'}
+$('visitor-mic').onclick=()=>{
+ if(VISUAL_ONLY)return;
+ const mic=recorder.status();if(mic.processing)return;if(mic.listening){recorder.finish();updateVoiceControls();return}if(mic.starting){recorder.cancel();updateVoiceControls();return}
+ if(!lastState||lastState.stale){$('voice-status').textContent='Connect the camera first.';return}
+ if(!lastState.active||!lastState.owner)microphoneSession=action('start');else microphoneSession=Promise.resolve();
+ voice.cancel(1);voice.setEnabled(true);voice.skipReply(lastState);if(globalThis.speechSynthesis)globalThis.speechSynthesis.resume();recorder.start($('recognition-language').value==='zh-CN'?'zh':'en');updateVoiceControls();
+};
+$('enter').onclick=()=>{$('setup').hidden=true};$('sound').onclick=()=>{if(VISUAL_ONLY)return;voice.setEnabled(!voice.status().sound);updateVoiceControls();if(lastState)voice.render(lastState)};
+ $('direction-sound').onclick=()=>{const s=directionAudio.status();directionAudio.setEnabled(s.error||!s.enabled);if(directionAudio.status().enabled)directionAudio.unlock()};
+function loadVoices(){const synth=globalThis.speechSynthesis;if(!synth)return;const select=$('speaker-voice'),previous=select.value;const voices=GuestDialogue.portraitVoices(synth.getVoices());select.replaceChildren();for(const v of voices){const option=document.createElement('option');option.value=v.voiceURI||v.name;option.textContent=v.name+' · '+v.lang;select.appendChild(option)}const chosen=GuestDialogue.chooseVoice(voices,previous);if(chosen){select.value=chosen.voiceURI||chosen.name;voice.setVoice(select.value)}else{const option=document.createElement('option');option.value='';option.textContent='System voice · quality unverified';select.appendChild(option)}}
+$('recognition-language').onchange=()=>{voice.setLanguage($('recognition-language').value);updateVoiceControls()};
+$('speaker-voice').onchange=()=>voice.setVoice($('speaker-voice').value);$('voice-preview').onclick=()=>{if(!VISUAL_ONLY)voice.preview()};loadVoices();if(globalThis.speechSynthesis)globalThis.speechSynthesis.addEventListener('voiceschanged',loadVoices);
+$('start').onclick=()=>action('start',true);$('restart').onclick=()=>action('restart',true);$('stop').onclick=()=>action('stop');
+async function toggleFullscreen(){const result=await GuestExperience.fullscreen(document);const note=$('fullscreen-note');note.hidden=!['unsupported','denied'].includes(result);note.textContent=result==='unsupported'?'Safari: Share → Add to Home Screen, then open the saved app for full screen.':'Full screen was declined. Tap again or use Share → Add to Home Screen.'}
+$('fullscreen').onclick=toggleFullscreen;$('visitor-fullscreen').onclick=toggleFullscreen;$('visitor-start').onclick=()=>action('start',true);$('visitor-stop').onclick=()=>action('stop');$('visitor-replan').onclick=()=>action('restart',true);
+function fullscreenLabel(){$('visitor-fullscreen').textContent=(document.fullscreenElement||document.webkitFullscreenElement)?'Exit full screen':'Full screen'}
+document.addEventListener('fullscreenchange',fullscreenLabel);document.addEventListener('webkitfullscreenchange',fullscreenLabel);
+$('voice-check').onclick=()=>{if(VISUAL_ONLY)return;recorder.cancel();voice.cancel(23);const params=new URLSearchParams(location.search);params.set('voicecheck','1');location.href='/?'+params.toString()};
+function staff(){$('setup').hidden=false}
+document.addEventListener('keydown',e=>{if(e.shiftKey&&e.key.toLowerCase()==='o')staff();if(e.key==='Escape')action('stop',false,3)});
+document.addEventListener('dblclick',e=>{if(e.clientX<300&&e.clientY<100)staff()});
+ document.addEventListener('visibilitychange',()=>{stateEpoch++;cueLight.clear();globalThis.GuestExperience?.directionAudio?.clear();if(document.hidden){photoFlow.reset();recorder.cancel();voice.cancel(21);if((lastState&&lastState.active&&lastState.owner)||(actionPending&&starting))action('stop',false,5);ipadCamera.stop('Camera paused in background.',5);$('setup').hidden=false}});
+ window.addEventListener('pagehide',()=>{photoFlow.reset();recorder.cancel();voice.cancel(22);globalThis.GuestExperience?.directionAudio?.clear();ipadCamera.stop(undefined,6)});state();frame();
+</script></html>

@@ -1,0 +1,57 @@
+{
+  "format_version": 1,
+  "kind": "operator_positioned_measured_reference",
+  "robot_model": "ur5e",
+  "robot_ip": "192.168.1.100",
+  "captured_utc": "2026-11-03T05:27:08.280383+00:00",
+  "joints_rad": [
+    -1.5838993231402796,
+    -1.2146262985518952,
+    -2.0306084156036377,
+    -1.519097713088133,
+    1.5945231914520264,
+    -0.04408723512758428
+  ],
+  "joints_deg": [
+    -90.7507463895658,
+    -69.59296059262068,
+    -116.34529205783547,
+    -87.03788762792524,
+    91.35944920593165,
+    -2.526012503211487
+  ],
+  "tcp_pose_m_rad": [
+    -0.12490730139420014,
+    -0.3109227429346357,
+    -0.07703042157412415,
+    -0.04332739761068753,
+    3.1153267306133006,
+    0.07923000216529907
+  ],
+  "tcp_offset_m_rad": [
+    0.00035785883442696065,
+    -0.0016664144902931374,
+    0.4938337222846361,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stationary_dwell_s": 0.6959999999962747,
+  "advancing_samples": 8,
+  "dashboard_at_capture": {
+    "safety_status": "NORMAL",
+    "robot_mode": "RUNNING",
+    "program_running": false,
+    "remote_control": false
+  },
+  "is_executable_profile": false,
+  "automatic_homing_authorized_by_record": false,
+  "runtime_reference_policy": "capture_stationary_on_explicit_ipad_start",
+  "motion_commands_sent": 0,
+  "read_only_cleanup_complete": true,
+  "provenance": {
+    "source": "tmp/lab-2026-11-03/manual-start-reference-01.json",
+    "sha256": "2d378b03ad21afee1999db1b6b21ff1b08b1cc18efcec22251984ae86238e5f3"
+  },
+  "full_workflow_physical_acceptance": false
+}

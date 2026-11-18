@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Microphone check</title>
+<style>body{background:#152019;color:#e9f3eb;font:18px system-ui;margin:0;padding:32px;max-width:800px}h1{font:34px Georgia}p{line-height:1.5;color:#bacfbf}button{padding:15px 20px;margin:6px 6px 6px 0;border:1px solid #96b69b;border-radius:10px;background:#263e2d;color:#fff;font:inherit}button:disabled{opacity:.4}meter{width:100%;height:32px}pre{white-space:pre-wrap;font:14px ui-monospace,monospace;line-height:1.5;background:#0c160f;padding:16px}#words{font-size:23px;color:#b9f4c8;min-height:56px}</style>
+<h1>Isolated microphone check</h1><p>No camera, model or robot interaction. Start each test yourself; nothing restarts automatically. Microphone level stays on this device. Recognition uses Safari's speech service; only status counts go to the computer.</p>
+<button id="level">1 · Test microphone level</button><button id="recognize">2 · Test English recognition</button><button id="stop">Stop test</button><button id="back">Back to portrait</button>
+<p id="status" role="status">Microphone off.</p><meter id="meter" min="0" max="100" value="0" aria-label="Microphone level"></meter><div id="words" aria-live="polite"></div><pre id="events"></pre>
+<script>
+const $=id=>document.getElementById(id),params=new URLSearchParams(location.search),client='voice-check-'+Date.now().toString(36),headers={'X-Guest-Token':params.get('key')||'','X-Guest-Client':client,'Content-Type':'application/json'};
+let stream=null,context=null,recognition=null,epoch=0,frame=null,cameraSession=null,reportQueue=Promise.resolve(),resultCount=0;
+let metrics={voice_available:!!(window.SpeechRecognition||window.webkitSpeechRecognition),voice_armed:false,voice_listening:false,voice_starting:false,voice_error:0,voice_results:0,voice_audio:false,voice_sound:false,voice_speech:false,voice_level:0,voice_check:true};
+function log(text){$('status').textContent=text;$('events').textContent=($('events').textContent+'\n'+text).split('\n').slice(-15).join('\n')}
+async function post(path,body){const r=await fetch(path,{method:'POST',headers,body:JSON.stringify(body)});if(!r.ok)throw Error('Diagnostic link unavailable');return r.json()}
+function report(){const snapshot={...metrics};reportQueue=reportQueue.then(async()=>{try{if(!cameraSession)cameraSession=(await post('/camera/start',{})).session;await post('/camera/ticket',{session:cameraSession,diagnostics:snapshot})}catch{cameraSession=null}})}
+function stop(){epoch++;if(recognition){const old=recognition;recognition=null;old.abort()}if(frame!==null)cancelAnimationFrame(frame);frame=null;if(stream)stream.getTracks().forEach(t=>t.stop());stream=null;if(context)context.close();context=null;metrics.voice_armed=false;metrics.voice_listening=false;metrics.voice_starting=false;$('level').disabled=false;$('recognize').disabled=false;report()}
+$('level').onclick=async()=>{
+ stop();const generation=epoch;$('level').disabled=true;$('recognize').disabled=true;metrics.voice_error=0;metrics.voice_level=0;
+ try{const Audio=window.AudioContext||window.webkitAudioContext;context=new Audio();await context.resume();
+  const media=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true}});
+  if(generation!==epoch){media.getTracks().forEach(t=>t.stop());return}stream=media;
+  const analyser=context.createAnalyser();analyser.fftSize=512;context.createMediaStreamSource(stream).connect(analyser);
+  const bytes=new Uint8Array(analyser.fftSize);let lastReport=0;metrics.voice_armed=true;metrics.voice_audio=true;log('Microphone open. Speak: the bar should move. Stop this test before test 2.');
+  const sample=now=>{if(generation!==epoch)return;analyser.getByteTimeDomainData(bytes);let sum=0;for(const n of bytes)sum+=((n-128)/128)**2;const level=Math.min(100,Math.round(Math.sqrt(sum/bytes.length)*500));$('meter').value=level;metrics.voice_level=level;if(now-lastReport>1000){lastReport=now;report()}frame=requestAnimationFrame(sample)};frame=requestAnimationFrame(sample);
+ }catch(e){if(generation!==epoch)return;stop();log('Microphone error: '+e.name);metrics.voice_error=e.name==='NotAllowedError'?1:3;report()}
+};
+$('recognize').onclick=()=>{
+ stop();const Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;if(!Recognition){log('Speech recognition is not available in this browser.');return}
+ const generation=epoch;const rec=new Recognition();recognition=rec;rec.lang='en-AU';rec.continuous=false;rec.interimResults=true;
+ Object.assign(metrics,{voice_armed:true,voice_starting:true,voice_error:0,voice_audio:false,voice_sound:false,voice_speech:false});$('level').disabled=true;$('recognize').disabled=true;$('words').textContent='';log('Starting recognition once…');report();
+ const valid=()=>generation===epoch&&recognition===rec;
+ rec.onstart=()=>{if(valid()){metrics.voice_starting=false;metrics.voice_listening=true;log('Recognition started. Say: Hello, can you hear me?');report()}};
+ rec.onaudiostart=()=>{if(valid()){metrics.voice_audio=true;log('Audio capture started.');report()}};
+ rec.onsoundstart=()=>{if(valid()){metrics.voice_sound=true;log('Sound detected.');report()}};
+ rec.onspeechstart=()=>{if(valid()){metrics.voice_speech=true;log('Speech detected.');report()}};
+ rec.onresult=e=>{if(!valid())return;let words='';for(let i=e.resultIndex||0;i<e.results.length;i++){words+=e.results[i][0].transcript+' ';if(e.results[i].isFinal)resultCount++}$('words').textContent=words;metrics.voice_results=Math.min(240,resultCount);log('Recognition text received.');report()};
+ rec.onerror=e=>{if(valid()){metrics.voice_error=({'not-allowed':1,'service-not-allowed':2,'audio-capture':3,'network':4,'no-speech':5,'aborted':6})[e.error]||7;log('Recognition error: '+e.error);report()}};
+ rec.onend=()=>{if(valid()){recognition=null;metrics.voice_armed=false;metrics.voice_starting=false;metrics.voice_listening=false;log('Recognition ended. No automatic restart.');$('level').disabled=false;$('recognize').disabled=false;report()}};
+ try{rec.start()}catch(e){stop();metrics.voice_error=8;log('Start failed: '+e.name);report()}
+};
+$('stop').onclick=()=>{stop();log('Microphone off.')};$('back').onclick=()=>{stop();params.delete('voicecheck');location.href='/?'+params.toString()};
+window.addEventListener('pagehide',()=>{stop();if(cameraSession)fetch('/camera/stop',{method:'POST',headers,body:JSON.stringify({session:cameraSession}),keepalive:true}).catch(()=>{})});
+</script></html>

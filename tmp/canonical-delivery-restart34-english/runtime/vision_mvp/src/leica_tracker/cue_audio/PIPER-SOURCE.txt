@@ -1,0 +1,20 @@
+Piper voice: en_US-ljspeech-high
+Downloaded: 2026-10-18
+Model card supplied by the voice publisher is included as PIPER-MODEL-CARD.txt.
+The card identifies the LJSpeech dataset licence as public domain.
+Runtime: piper-tts (installed separately from PyPI; GPL-3.0).
+
+en_US-ljspeech-high.onnx
+https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ljspeech/high/en_US-ljspeech-high.onnx?download=true
+SHA256: 5d4f08ba6a2a48c44592eed3ce56bf85e9de3dd4e20df90541ae68a8310c029a
+Bytes: 114199011
+
+en_US-ljspeech-high.onnx.json
+https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ljspeech/high/en_US-ljspeech-high.onnx.json?download=true
+SHA256: 7e1f4634af596d83cca997fb7a931ba80b70f8a316a2655ee69c55365e0ace14
+Bytes: 4970
+
+PIPER-MODEL-CARD.txt
+https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ljspeech/high/MODEL_CARD?download=true
+SHA256: 289f7421072d689a3d91f6c632f486af46f9b8b04417536104a4ea667b8a394b
+Bytes: 513

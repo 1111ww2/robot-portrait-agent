@@ -1,0 +1,251 @@
+# SIMULATION_ONLY：仅供仿真。
+# 使用官方 URSim 实测验证，通过 RTDE session1 检查。
+def leica_initialize_home():
+  global waypoint_index = 0
+  global packet_age = 0.0
+  global motion_done = False
+  global motion_error = 0
+  thread timer():
+    while True:
+      global packet_age = packet_age + get_steptime()
+      sync()
+    end
+  end
+  thread route_motion():
+    if waypoint_index <= 0:
+      if not is_within_safety_limits([-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.4390951585,0.1920321584]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.4390951585,0.1920321584], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 1
+    end
+    if waypoint_index <= 1:
+      if not is_within_safety_limits([-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.2692992401,0.1920321584]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.2692992401,0.1920321584], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 2
+    end
+    if waypoint_index <= 2:
+      if not is_within_safety_limits([-1.3213560567,-1.3835467153,-1.9876410154,-1.3001676625,1.2722191654,0.1838928254]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3213560567,-1.3835467153,-1.9876410154,-1.3001676625,1.2722191654,0.1838928254], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 3
+    end
+    if waypoint_index <= 3:
+      if not is_within_safety_limits([-1.3757682766,-1.6039992786,-1.7898726898,-1.2575989516,1.2917810378,0.1293638299]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3757682766,-1.6039992786,-1.7898726898,-1.2575989516,1.2917810378,0.1293638299], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 4
+    end
+    if waypoint_index <= 4:
+      if not is_within_safety_limits([-1.3116790071,-1.3443398902,-2.0228135170,-1.3077383796,1.2687401452,0.1935906432]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3116790071,-1.3443398902,-2.0228135170,-1.3077383796,1.2687401452,0.1935906432], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 5
+    end
+    if waypoint_index <= 5:
+      if not is_within_safety_limits([-1.2975770847,-1.2872055747,-2.0740687973,-1.3187708399,1.2636703281,0.2077228302]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.2975770847,-1.2872055747,-2.0740687973,-1.3187708399,1.2636703281,0.2077228302], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 6
+    end
+    if waypoint_index <= 6:
+      if not is_within_safety_limits([-1.3142430698,-1.3547282589,-2.0134940959,-1.3057324176,1.2696619578,0.1910210777]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3142430698,-1.3547282589,-2.0134940959,-1.3057324176,1.2696619578,0.1910210777], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 7
+    end
+    if waypoint_index <= 7:
+      if not is_within_safety_limits([-1.3470181800,-1.4875174937,-1.8943686740,-1.2800912254,1.2814450191,0.1581756279]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3470181800,-1.4875174937,-1.8943686740,-1.2800912254,1.2814450191,0.1581756279], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 8
+    end
+    if waypoint_index <= 8:
+      if not is_within_safety_limits([-1.3757682766,-1.6039992786,-1.7898726898,-1.2575989516,1.2917810378,0.1293638299]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3757682766,-1.6039992786,-1.7898726898,-1.2575989516,1.2917810378,0.1293638299], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 9
+    end
+    if waypoint_index <= 9:
+      if not is_within_safety_limits([-1.3116790071,-1.3443398902,-2.0228135170,-1.3077383796,1.2687401452,0.1935906432]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3116790071,-1.3443398902,-2.0228135170,-1.3077383796,1.2687401452,0.1935906432], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 10
+    end
+    if waypoint_index <= 10:
+      if not is_within_safety_limits([-1.2975770847,-1.2872055747,-2.0740687973,-1.3187708399,1.2636703281,0.2077228302]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.2975770847,-1.2872055747,-2.0740687973,-1.3187708399,1.2636703281,0.2077228302], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 11
+    end
+    if waypoint_index <= 11:
+      if not is_within_safety_limits([-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.2692992401,0.1920321584]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.2692992401,0.1920321584], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 12
+    end
+    if waypoint_index <= 12:
+      if not is_within_safety_limits([-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.3726251103,0.1920321584]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.3726251103,0.1920321584], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 13
+    end
+    if waypoint_index <= 13:
+      if not is_within_safety_limits([-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.5492992401,0.1920321584]):
+        global motion_error = 3
+        return False
+      end
+      movej([-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.5492992401,0.1920321584], a=1.2000000000, v=0.7000000000, r=0)
+      global waypoint_index = 14
+    end
+    global motion_done = True
+  end
+  expected_start = [-1.3132341544,-1.3506406111,-2.0171611309,-1.3065217298,1.5492992401,0.1920321584]
+  expected_tcp = p[0.0000000000,0.0000000000,0.0000000000,0.0000000000,0.0000000000,0.0000000000]
+  current = get_actual_joint_positions()
+  i = 0
+  while i < 6:
+    if norm(current[i]-expected_start[i]) > 0.01:
+      textmsg("LEICA_FAULT_HOME_START", current)
+      write_output_integer_register(40, 1)
+      write_output_integer_register(42, -10)
+      return False
+    end
+    i = i + 1
+  end
+  global pause_stop_done = True
+  thread pause_stop():
+    stopj(1.2000000000)
+    global pause_stop_done = True
+  end
+  clock_thread = run timer()
+  started = False
+  armed = False
+  paused = False
+  previous = 0
+  consumed = 0
+  write_output_integer_register(42, 100)
+  write_output_integer_register(43, 0)
+  write_output_integer_register(40, 1)
+  while True:
+    seq = read_input_integer_register(42)
+    flag = read_input_integer_register(43)
+    token = read_input_integer_register(44)
+    seq_again = read_input_integer_register(42)
+    valid = False
+    pause_requested = False
+    fault = 0
+    if seq == seq_again and seq > previous:
+      if token == 1 and (flag == 0 or flag == 1 or flag == 3):
+        previous = seq
+        consumed = seq
+        global packet_age = 0.0
+        if flag == 3:
+          pause_requested = True
+        elif flag == 0 and not started:
+          armed = True
+          if pause_stop_done:
+            paused = False
+            write_output_integer_register(42, 100)
+          end
+        elif flag == 1 and armed:
+          valid = True
+        else:
+          fault = 11
+        end
+      elif token == 1:
+        fault = 11
+      end
+    end
+    if (started and packet_age > 0.25) or (not started and packet_age > 2.0):
+      fault = 12
+    end
+    actual_tcp = get_tcp_offset()
+    if norm([actual_tcp[0]-expected_tcp[0],actual_tcp[1]-expected_tcp[1],actual_tcp[2]-expected_tcp[2],actual_tcp[3]-expected_tcp[3],actual_tcp[4]-expected_tcp[4],actual_tcp[5]-expected_tcp[5]]) > 0.0001:
+      fault = 13
+    end
+    actual_speed = get_actual_tcp_speed()
+    qd = get_actual_joint_speeds()
+    i = 0
+    while i < 6:
+      if norm(qd[i]) > 0.9120000000:
+        fault = 14
+      end
+      i = i + 1
+    end
+    if motion_error != 0:
+      fault = 15
+    end
+    if fault != 0:
+      if not pause_stop_done:
+        kill brake_thread
+      end
+      if started and not motion_done and not paused:
+        kill motion_thread
+      end
+      write_output_integer_register(42, -fault)
+      stopj(0.2)
+      textmsg("LEICA_FAULT_HOME_", fault)
+      break
+    end
+    if pause_requested and not paused:
+      if started and not motion_done:
+        kill motion_thread
+      end
+      paused = True
+      global pause_stop_done = False
+      brake_thread = run pause_stop()
+    end
+    if valid and paused:
+      if pause_stop_done:
+        paused = False
+        if started and not motion_done:
+          motion_thread = run route_motion()
+          write_output_integer_register(42, 101)
+        end
+      else:
+        valid = False
+      end
+    end
+    if valid and not started:
+      motion_thread = run route_motion()
+      started = True
+      write_output_integer_register(42, 101)
+    end
+    write_output_integer_register(43, consumed)
+    if paused:
+      write_output_integer_register(42, 103)
+    elif motion_done:
+      write_output_integer_register(42, 102)
+      break
+    end
+    sync()
+  end
+  kill clock_thread
+end

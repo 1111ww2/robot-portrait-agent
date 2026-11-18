@@ -1,0 +1,12 @@
+{
+  "status": "UNVERIFIED_DO_NOT_CONTROL",
+  "robot_ip": null,
+  "camera": null,
+  "base_axis": "X",
+  "camera_right_sign": null,
+  "range_m": null,
+  "reviewed_range_m": null,
+  "neutral_tcp_m_rad": [null, null, null, null, null, null],
+  "tcp_offset_m_rad": [null, null, null, null, null, null],
+  "notes": "Old horizontal-follow mode only. Set a range appropriate to the current installation and separately confirm exactly that range; reuse while the installation and review remain valid. This does not configure the Claude/iPad physical gesture adapter."
+}

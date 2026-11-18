@@ -1,0 +1,16 @@
+{
+  "kind": "unreviewed_simulator_direction_candidate",
+  "source": "simulator_reference_guidance:sim-fast",
+  "coordinate_frame": "simulator_base_axes",
+  "physical_mapping_verified": false,
+  "hardware_execution_enabled": false,
+  "directions": {
+    "MOVE_LEFT": "-X",
+    "MOVE_RIGHT": "+X",
+    "MOVE_UP": "+Z",
+    "MOVE_DOWN": "-Z",
+    "MOVE_CLOSER": "-Y",
+    "MOVE_FARTHER": "+Y"
+  },
+  "note": "Offline comparison only. Simulator conventions are not a calibrated physical camera-to-robot mapping or a reviewed motion path."
+}
