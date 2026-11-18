@@ -31,7 +31,7 @@
   .hero:before{inset:0 0 auto 51%;height:420px;background-size:100% 100%,100% 100%,auto 390px,auto 390px;background-image:linear-gradient(0deg,#111d24 0%,transparent 40%),linear-gradient(90deg,#111d24,rgba(17,29,36,.53) 30%,rgba(17,29,36,.35) 70%),url("assets/display/hardware-960.webp"),var(--hardware-preview)}
 }
 
-#purpose img[src="assets/ur5e-workstation.webp"]{aspect-ratio:1708/1248;object-fit:cover}
+#purpose img[data-source="assets/ur5e-workstation.webp"]{aspect-ratio:1708/1248;object-fit:cover}
 @media(max-width:520px){
   .bar{padding-inline:12px;gap:8px}
   .brand{font-size:13px;--brand-gap:6px;--brand-icon:22px}
@@ -52,3 +52,5 @@
   .pocket-toc .toc a[aria-current]{background:#e4e9ed;color:var(--ink);font-weight:650;border-radius:3px}
   .chapter,.topic{scroll-margin-top:33px}
 }
+.film-quality{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:5px;color:var(--sub);font-size:12px}
+.film-quality select{font:inherit;color:var(--ink);background:white;border:1px solid var(--line);border-radius:4px;padding:4px}
