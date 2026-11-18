@@ -54,3 +54,58 @@
 }
 .film-quality{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:5px;color:var(--sub);font-size:12px}
 .film-quality select{font:inherit;color:var(--ink);background:white;border:1px solid var(--line);border-radius:4px;padding:4px}
+
+/* 手机阅读字号，导航继续使用窄屏自适应规则。 */
+@media (max-width:700px) {
+  html { --pad:clamp(15px,4.1vw,21px); -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+  body { font-size:14px; line-height:1.65; }
+  .hero-layout { padding-block:24px 16px; gap:18px; }
+  .hero h1 { font-size:clamp(31px,8.2vw,38px); line-height:1.12; letter-spacing:-.045em; margin:11px 0 10px; }
+  .hero .objective { font-size:16px; line-height:1.45; margin-bottom:7px; }
+  .hero .dek { font-size:14px; line-height:1.65; }
+  .eyebrow,.folio { font-size:11px; }
+  .repo { padding:16px; }
+  .repo-title { gap:9px; }
+  .repo-title h2 { font-size:23px; }
+  .repo-title .gh { font-size:25px; }
+  .repo-path { margin-top:6px; }
+  .repo-desc,.product-status b,.product-status span { font-size:12px; }
+  .repo-button { font-size:14px; min-height:40px; padding:8px 13px; margin:10px 0 12px; }
+  .file-row { padding-block:6px; }
+  .product-status { padding-block:10px 13px; }
+  .decision-feature { padding-block:26px 8px; }
+  .decision-feature header h2,.film-label h2,.manual-head h2,.chapter h2 { font-size:22px; line-height:1.25; letter-spacing:-.03em; }
+  .decision-feature header h2 { margin:7px 0 9px; }
+  .decision-feature header p,.decision-stages p,.acceptance,.feature-detail p,.chapter p { font-size:14px; line-height:1.7; }
+  .decision-stages { margin:16px 0; gap:13px; }
+  .decision-stages section { padding-top:10px; }
+  .decision-stages h3,.engineering h3,.chapter h3,.chapter .topic-title { font-size:16px; line-height:1.45; margin-bottom:6px; }
+  .acceptance,.technical-aside { padding:11px 12px; }
+  .decision-feature summary { font-size:14px; }
+  .film { padding-block:25px; }
+  .film-label { gap:8px; margin-bottom:12px; }
+  .film-label .eyebrow { margin-bottom:6px; }
+  .film-label>span,.film-label>span b,.tiles figcaption,.player figcaption { font-size:12px; }
+  .film-label>span { white-space:nowrap; }
+  .player figcaption strong { font-size:13px; }
+  .engineering li { padding-left:28px; }
+  .engineering li p,.contract dt,.contract dd,.verification li,.source { font-size:13px; line-height:1.65; }
+  .manual-head { padding-block:22px 12px; }
+  .chapter { padding:20px 0 25px; }
+  .chapter h2 { margin-top:4px; }
+  .chapter header { margin-bottom:13px; }
+  .chapter h3 { margin-top:20px; }
+  .chapter p { margin-block:7px; }
+  .topic-title { padding-top:15px; }
+  .chapter table { font-size:12.5px; line-height:1.55; }
+  .chapter th,.chapter td { padding:8px; }
+  #purpose table { table-layout:fixed; }
+  #purpose thead th:first-child { width:33%; }
+  .overflow,.tiles { margin-block:14px 18px; }
+  .tiles { gap:13px 10px; }
+  .tiles figcaption { margin-top:5px; line-height:1.5; }
+  .source { margin:14px 0 9px; }
+  .source a { font-size:11.5px; line-height:1.55; }
+  footer>.wrap { gap:4px; padding-block:18px; font-size:12px; }
+  footer b { font-size:16px; }
+}
