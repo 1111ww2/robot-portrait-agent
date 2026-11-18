@@ -141,12 +141,62 @@
 .film-quality .film-direct{margin-right:auto}
 .film-status:empty{display:none}
 .film-status{margin-top:5px;color:var(--sub);font-size:12px}
+.field-study{padding-block:clamp(32px,4vw,62px)}
+.field-study h2{font-size:clamp(26px,2.7vw,42px);letter-spacing:-.045em;margin:10px 0 22px}
+.field-columns{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,5vw,72px)}
+.field-columns h3,.experiment-heading{font-size:20px;margin-bottom:9px}
+.field-columns p{font-size:15px;line-height:1.8;color:var(--sub);margin:8px 0 14px}
+.field-columns a{font-size:14px;font-weight:600}
+.field-stills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}
+.field-stills img{width:100%;height:auto;border-radius:3px}
+.field-stills figcaption{font-size:13px;line-height:1.5;color:var(--sub);margin-top:6px}
+.field-stills figcaption b,.restart-case p b{display:block;color:var(--ink)}
+.restart-case p b{font-size:14px}
+.field-study + .decision-feature{border-top:1px solid var(--line)}
+.decision-feature header p+p{margin-top:8px}
+.experiment-heading{margin-top:24px}
+@media(max-width:700px){
+ .field-study{padding-block:25px}
+ .field-study h2{font-size:22px;line-height:1.3;margin:7px 0 14px}
+ .field-columns{grid-template-columns:1fr;gap:20px}
+ .field-columns h3,.experiment-heading{font-size:16px}
+ .field-columns p{font-size:14px;line-height:1.7;margin:6px 0 10px}
+ .field-stills{gap:6px;margin:11px 0}
+ .field-stills figcaption{font-size:12px}
+ .field-columns a,.restart-case p b{font-size:13px}
+ .restart-case{border-top:1px solid var(--line);padding-top:15px}
+}
 </style></head><body><a class="skip" href="#main">跳至正文</a>
 <header class="mast"><div class="wrap bar"><div class="brand"><img src="robot-portrait-43b4b140.svg" alt="" width="31" height="31"><span>Robot Portrait Agent</span></div><nav aria-label="章节导航"><a href="#film">项目演示</a><a href="#documentation">技术文档</a></nav><span class="author">邓羽希<small>（chloe）</small></span></div></header><main id="main"><section class="hero"><div class="wrap hero-layout">
-<div class="intro"><div class="eyebrow"><i></i>门店橱窗与品牌活动 · 互动摄影原型</div><h1>多模态机械臂<br>摄影 <span lang="en">Agent</span></h1><h2 class="objective">用 Python 串联 Claude 多模态构图、MediaPipe 姿态跟踪与 UR5e 闭环引导。</h2><p class="dek">橱窗里的机械臂用动作吸引路人驻足，让观看自然过渡到主动参与。顾客轻点开始，跟随提示调整站位，拍完即可扫码带走自己的肖像。</p></div>
+<div class="intro"><div class="eyebrow"><i></i>门店橱窗与品牌活动 · 互动摄影原型</div><h1>多模态机械臂<br>摄影 <span lang="en">Agent</span></h1><h2 class="objective">站在哪里？什么时候该停？什么时候拍？</h2><p class="dek">橱窗里的机械臂能吸引路人驻足。要让人愿意站到镜头前，还得让他知道下一步该做什么。我把拍摄拆成三步：用手势和文字引导站位，到位后提示“保持不动”，再用倒计时告诉参与者快门何时触发。拍完即可扫码带走肖像。</p></div>
 <aside class="repo" aria-label="GitHub 源代码"><div class="repo-title"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.32-3.79-1.32-.51-1.3-1.25-1.64-1.25-1.64-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.01-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98a4.32 4.32 0 0 1 1.16 3.01c0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg><h2>GitHub 源码仓库</h2></div><div class="repo-path">1111ww2 <span>/</span> <strong>robot-portrait-agent</strong></div><p class="repo-desc">项目源码、中文技术说明与回归测试用例</p><a class="repo-button" href="https://github.com/1111ww2/robot-portrait-agent" target="_blank" rel="noopener noreferrer">查看源码与中文 README <span aria-hidden="true">↗</span></a><div class="files"><a class="file-row" href="https://github.com/1111ww2/robot-portrait-agent/blob/main/vision_mvp/src/leica_tracker/claude_agent.py" target="_blank" rel="noopener noreferrer"><code>claude_agent.py</code><span>多轮决策与过期回复处理</span><i aria-hidden="true">↗</i></a><a class="file-row" href="https://github.com/1111ww2/robot-portrait-agent/blob/main/vision_mvp/src/leica_tracker/claude_framing.py" target="_blank" rel="noopener noreferrer"><code>claude_framing.py</code><span>构图请求与结果校验</span><i aria-hidden="true">↗</i></a><a class="file-row" href="https://github.com/1111ww2/robot-portrait-agent/blob/main/vision_mvp/src/leica_tracker/pose.py" target="_blank" rel="noopener noreferrer"><code>pose.py</code><span>人物关键点跟踪</span><i aria-hidden="true">↗</i></a><a class="file-row" href="https://github.com/1111ww2/robot-portrait-agent/tree/main/robot_programs" target="_blank" rel="noopener noreferrer"><code>robot_programs/</code><span>两种机型的动作程序</span><i aria-hidden="true">↗</i></a></div></aside>
-</div><div class="wrap status-wrap"><div class="product-status"><div><b>原型验证</b><span>UR5e 实机完成引导、倒计时和取片演示；UR5e、UR10e 在 URSim 中验证停止与重启。</span></div></div></div></section>
-<section class="decision-feature wrap" id="agent-design" aria-labelledby="decision-title"><header><div class="eyebrow"><i></i>Agent 架构设计 · 多轮实验</div><h2 id="decision-title">多轮决策与状态校验</h2><p>机械臂一动，相机画面也跟着动。如果此时立刻给出下一条站位提示，就可能把相机移动误判成顾客移动。为此，我让实机版只选一次构图，每次手势结束后先回位、再观察。多轮实验则用来验证另一个问题：什么时候值得让模型重新决策？</p></header>
+</div><div class="wrap status-wrap"><div class="product-status"><div><b>技术实现</b><span>Python 串联三步流程：Claude 规划构图，MediaPipe 判断人物是否到位，UR5e 执行引导动作。</span></div></div></div></section>
+<section class="field-study wrap" id="field-study" aria-labelledby="field-study-title">
+  <div class="eyebrow"><i></i>UR5e 实机测试</div>
+  <h2 id="field-study-title">从站位到出片｜52.7 秒实机记录</h2>
+  <div class="field-columns">
+    <div>
+      <h3>首次体验者独立试拍</h3>
+      <p>我邀请第一次使用这套系统的参与者独立拍摄。我在镜头后观察，没有主动提示。实拍里，iPad 先亮起红色方向提示，随后切换到绿色到位确认并进入倒计时，最后显示肖像和取片二维码。</p>
+      <div class="field-stills">
+        <figure><img src="assets/display/field-guide.webp" width="600" height="450" alt="机械臂上的 iPad 显示红色方向提示" loading="lazy" decoding="async"><figcaption><b>27 秒</b>方向提示</figcaption></figure>
+        <figure><img src="assets/display/field-confirm.webp" width="600" height="450" alt="iPad 的提示变绿，参与者已到目标位置" loading="lazy" decoding="async"><figcaption><b>48 秒</b>到位、倒计时</figcaption></figure>
+        <figure><img src="assets/display/field-photo.webp" width="600" height="450" alt="iPad 并排显示拍好的肖像和取片二维码" loading="lazy" decoding="async"><figcaption><b>52.5 秒</b>肖像与取片码</figcaption></figure>
+      </div>
+      <p>这次试拍中，参与者跟着现场提示走到了出片。对这个交互来说，“可以停了”值得单独提示：方向手势告诉人该往哪边移，到位确认告诉人可以保持姿势，等快门。</p>
+      <a href="#tests">看完整实机测试记录 →</a>
+    </div>
+    <div class="restart-case" id="restart-case">
+      <h3>中途按停后，下一次还能开始吗？</h3>
+      <p><b>实机上卡住的一步</b>一次实机测试中，按下“停止”后，机械臂停在了偏离参考位的位置。再次点击“开始”，新一轮拍摄走不下去。</p>
+      <p><b>我改了重启规则</b>按“停止”就取消这轮动作和待拍照片。再次点击“开始”时，控制器先确认上一轮已清理、机械臂已静止，再把当前位置设为新一轮的参考位。</p>
+      <p><b>双机型仿真复核</b>我在 URSim 中分别用 UR5e 和 UR10e 重走了这条路径：运动中按停 → 在偏离参考位的位置重新开始 → 再次发出方向提示。两种机型都走通了。</p>
+      <a href="https://github.com/1111ww2/robot-portrait-agent/blob/19ce8b3/vision_mvp/tests/test_stop_start_reference_restart.py#L98-L125" target="_blank" rel="noopener noreferrer">看停止与重启的测试用例 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="decision-feature wrap" id="agent-design" aria-labelledby="decision-title"><header><div class="eyebrow"><i></i>Agent 架构设计</div><h2 id="decision-title">为什么每轮只让 AI 选一次构图？</h2><p>参与者刚按提示挪了半步，需要知道这一步有没有走对。如果此时模型又换了构图，上一条提示就失去了参照。我让实机版在每轮拍摄开始时只选一次构图，之后由本地视觉持续判断人物离同一目标还有多远。</p><p>相机装在机械臂末端，做手势也会改变画面。每次提示结束后，机械臂先回到参考位、停稳，再读取新画面判断人物是否到位。</p><h3 class="experiment-heading">独立实验分支的多轮决策</h3></header>
 <div class="decision-stages"><section><h3>什么变化值得再次调用模型？</h3><p>实验 Agent 以参与者入画、显式输入或等待中的画面变化触发判断。比较灰度帧时先扣除平均亮度，减少自动曝光造成的误触发。</p></section>
 <section><h3>模型如何选择下一步？</h3><p>每轮结合最多 4 帧画面、16 条历史记录和上一动作结果。调度器读取结构化决策：发出一次手势、等待回应，或结束互动。手势完成后留出停顿，让参与者有时间回应。</p></section>
 <section><h3>迟到的回复还能执行吗？</h3><p>控制器在接收回复时复核会话代次、请求时间和人物位置。新输入已取代旧请求、回复超过 25 秒，或人物已经明显移位时，旧手势都不会执行。</p></section></div>

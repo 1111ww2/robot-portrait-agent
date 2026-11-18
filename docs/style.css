@@ -141,3 +141,28 @@
 .film-quality .film-direct{margin-right:auto}
 .film-status:empty{display:none}
 .film-status{margin-top:5px;color:var(--sub);font-size:12px}
+.field-study{padding-block:clamp(32px,4vw,62px)}
+.field-study h2{font-size:clamp(26px,2.7vw,42px);letter-spacing:-.045em;margin:10px 0 22px}
+.field-columns{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,5vw,72px)}
+.field-columns h3,.experiment-heading{font-size:20px;margin-bottom:9px}
+.field-columns p{font-size:15px;line-height:1.8;color:var(--sub);margin:8px 0 14px}
+.field-columns a{font-size:14px;font-weight:600}
+.field-stills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}
+.field-stills img{width:100%;height:auto;border-radius:3px}
+.field-stills figcaption{font-size:13px;line-height:1.5;color:var(--sub);margin-top:6px}
+.field-stills figcaption b,.restart-case p b{display:block;color:var(--ink)}
+.restart-case p b{font-size:14px}
+.field-study + .decision-feature{border-top:1px solid var(--line)}
+.decision-feature header p+p{margin-top:8px}
+.experiment-heading{margin-top:24px}
+@media(max-width:700px){
+ .field-study{padding-block:25px}
+ .field-study h2{font-size:22px;line-height:1.3;margin:7px 0 14px}
+ .field-columns{grid-template-columns:1fr;gap:20px}
+ .field-columns h3,.experiment-heading{font-size:16px}
+ .field-columns p{font-size:14px;line-height:1.7;margin:6px 0 10px}
+ .field-stills{gap:6px;margin:11px 0}
+ .field-stills figcaption{font-size:12px}
+ .field-columns a,.restart-case p b{font-size:13px}
+ .restart-case{border-top:1px solid var(--line);padding-top:15px}
+}
