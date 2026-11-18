@@ -168,7 +168,8 @@
 }
 /* 实机记录的四帧时间线与同页测试细节。 */
 .field-columns > *, .repo, .verification li > * { min-width:0; }
-.field-columns .four { gap:10px; margin:14px 0; }
+.field-timeline { grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px 8px; margin:14px 0; }
+.field-timeline figcaption b { display:block; color:var(--ink); font-variant-numeric:tabular-nums; }
 .repo .source { color:white; }
 .repo .source a { display:inline-block; max-width:100%; padding:10px 14px; margin-top:6px; border-radius:4px; background:#355de2; color:white; }
 .repo .source a:hover { background:#294cc1; }
@@ -179,11 +180,15 @@
 .field-study .source a { font:13px/1.65 var(--mono); }
 #field-study,#tests { scroll-margin-top:var(--mast-height); }
 @media(max-width:700px){
-  .field-columns .four { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .field-timeline { gap:10px 5px; }
   .field-study .source a { font-size:12px; }
 }
 /* 原型与控制章节内的两组技术主题。 */
 .chapter .system-heading { font-size:clamp(23px,2vw,29px); line-height:1.3; margin-top:36px; }
 @media(max-width:700px){
   .chapter .system-heading { font-size:20px; margin-top:26px; }
+}
+
+@media(min-width:701px) and (max-width:960px){
+  .field-columns { grid-template-columns:1fr; }
 }
