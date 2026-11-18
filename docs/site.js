@@ -1,14 +1,18 @@
 const chapters = [...document.querySelectorAll(".chapter")];
 if (chapters.length) {
+  const links = [...document.querySelectorAll(".toc a")];
+  let activeChapter;
   let scheduled = false;
   function markCurrent() {
     const position = Math.min(window.innerHeight * .3, 200);
     const current = [...chapters].reverse().find(section => section.getBoundingClientRect().top <= position) ?? chapters[0];
-    document.querySelectorAll(".toc a").forEach(link => {
+    scheduled = false;
+    if (activeChapter === current) return;
+    activeChapter = current;
+    links.forEach(link => {
       if (link.hash === "#" + current.id) link.setAttribute("aria-current", "location");
       else link.removeAttribute("aria-current");
     });
-    scheduled = false;
   }
   markCurrent();
   window.addEventListener("scroll", () => {
