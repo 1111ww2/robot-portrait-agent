@@ -192,3 +192,72 @@
 @media(min-width:701px) and (max-width:960px){
   .field-columns { grid-template-columns:1fr; }
 }
+
+/* 桌面阅读布局。手机沿用原有字号、导航和图组排版。 */
+@media (min-width: 701px) {
+  .wrap { width:min(100%,1320px); padding-inline:clamp(28px,4vw,56px); }
+  .hero-layout {
+    grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);
+    gap:clamp(26px,5vw,72px);
+    padding-block:clamp(36px,4.2vw,62px);
+  }
+  .hero h1 { font-size:clamp(45px,5vw,68px); margin-block:15px; }
+  .hero .dek { max-width:38em; }
+  .hero:before { left:40%; }
+  .hero .repo { justify-self:end; width:min(100%,480px); padding:clamp(20px,2vw,30px); }
+  .repo-title h2 { font-size:clamp(23px,2.1vw,30px); }
+  .field-study,.decision-feature,.film { padding-block:clamp(34px,3.5vw,54px); }
+  .field-study h2,.decision-feature header h2,.film-label h2,.manual-head h2 {
+    font-size:clamp(27px,2.55vw,36px);
+    line-height:1.22;
+  }
+  .field-study h2 { margin-bottom:24px; }
+  .field-timeline figcaption { line-height:1.45; }
+  .field-timeline figcaption b { margin-bottom:2px; }
+  .wide-toc .toc { position:static; padding-top:0; }
+  .case-layout { grid-template-columns:clamp(140px,15vw,180px) minmax(0,1fr); gap:clamp(26px,4.5vw,64px); }
+  .manual .wrap { max-width:1200px; }
+  .chapter { padding-block:30px 38px; }
+  .chapter header { margin-bottom:20px; }
+  .chapter p { max-width:54em; }
+  .demo-layout { grid-template-columns:minmax(0,1.65fr) minmax(0,1fr); gap:clamp(24px,3vw,44px); }
+  .engineering { padding-top:0; }
+}
+@media (min-width: 961px) {
+  .field-study {
+    display:grid;
+    grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+    grid-template-rows:auto auto auto 1fr;
+    column-gap:clamp(34px,4.5vw,64px);
+    align-items:start;
+  }
+  .field-study > .eyebrow,.field-study > h2 { grid-column:1/-1; }
+  .field-columns { display:contents; }
+  .field-columns > :first-child { grid-area:3 / 1 / 5 / 2; }
+  .field-columns .restart-case { grid-area:3 / 2; }
+  .field-study .record-result {
+    grid-area:4 / 2;
+    border-top:1px solid var(--line);
+    padding-top:14px;
+    margin-top:18px;
+    color:var(--sub);
+    font-size:14px;
+  }
+  .record-result strong { display:block; color:var(--ink); margin-bottom:4px; }
+  .decision-feature { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); column-gap:clamp(32px,4vw,60px); }
+  .decision-feature header,.decision-stages { grid-column:1/-1; }
+  .decision-feature header {
+    display:grid; grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);
+    column-gap:clamp(28px,4vw,60px); align-content:start;
+  }
+  .decision-feature header .eyebrow { grid-area:1 / 1; align-self:start; }
+  .decision-feature header h2 { grid-area:2 / 1; align-self:start; margin-block:6px 0; }
+  .decision-feature header p:first-of-type { grid-area:1 / 2 / 3 / 3; }
+  .decision-feature header p+p { grid-area:3 / 2; }
+  .experiment-heading { grid-column:1/-1; margin:26px 0 0; }
+  .decision-stages { gap:clamp(22px,2.6vw,38px); margin:14px 0 24px; }
+  .agent-budget,.decision-feature .acceptance { margin:0; padding:14px 0 0; border-top:1px solid var(--line); align-self:start; }
+  .agent-budget p { margin-top:0; }
+  .decision-feature .acceptance { background:transparent; }
+  .decision-feature .acceptance b { display:block; margin-bottom:6px; }
+}
