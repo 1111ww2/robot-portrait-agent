@@ -73,22 +73,47 @@ if ('IntersectionObserver' in window) {
 const player = document.querySelector('#player');
 const quality = document.querySelector('#film-quality');
 if (player && quality) {
-  let pendingTime = 0;
-  let resumePlayback = false;
+  const direct = document.querySelector('#film-direct');
+  const status = document.querySelector('#film-status');
+  let pending = null;
+  let hasStarted = false;
+  function showProblem(message) {
+    direct.hidden = false;
+    status.textContent = message;
+  }
   quality.addEventListener('change', () => {
-    if (player.readyState >= 1) {
-      pendingTime = player.currentTime;
-      resumePlayback = !player.paused && !player.ended;
-    }
-    player.src = quality.value;
-    player.preload = 'metadata';
+    const next = {
+      url: new URL(quality.value, document.baseURI).href,
+      time: pending?.time ?? (player.ended ? 0 : player.currentTime),
+      play: pending?.play ?? (!player.paused || !hasStarted || player.ended)
+    };
+    pending = next;
+    status.textContent = '';
+    direct.href = next.url;
+    direct.hidden = quality.selectedIndex === 0;
+    player.preload = next.play ? 'auto' : 'metadata';
+    player.src = next.url;
     player.load();
+    // 在选择画质的用户操作内请求播放，保留移动浏览器的声音播放授权。
+    if (next.play) {
+      player.play().catch(error => {
+        if (player.src !== next.url || error.name === 'AbortError') return;
+        showProblem(error.name === 'NotAllowedError' ? '请轻点视频上的播放键。' : '视频未能播放，可直接打开视频。');
+      });
+    }
   });
   player.addEventListener('loadedmetadata', () => {
-    if (pendingTime > 0) player.currentTime = Math.min(pendingTime, player.duration);
-    if (resumePlayback) player.play().catch(() => {});
-    pendingTime = 0;
-    resumePlayback = false;
+    if (!pending || pending.url !== player.currentSrc) return;
+    if (pending.time > 0) player.currentTime = Math.min(pending.time, player.duration);
+    pending = null;
+  });
+  player.addEventListener('error', () => {
+    pending = null;
+    showProblem('视频未能加载，可直接打开视频。');
+  });
+  player.addEventListener('playing', () => {
+    hasStarted = true;
+    status.textContent = '';
   });
   if ('IntersectionObserver' in window && !navigator.connection?.saveData) {
     const videoObserver = new IntersectionObserver(entries => {
