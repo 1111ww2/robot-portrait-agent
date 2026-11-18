@@ -1,0 +1,19 @@
+# 本地凭据与会话
+.env
+.env.*
+!.env.example
+**/guest-link.json
+**/guest-session*.json
+*.pem
+*.key
+# 环境、缓存与系统文件
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+node_modules/
+# 仅忽略本地运行输出，保留已归档的 canonical 运行包
+tmp/guidance-live/
+tmp/physical-live/
+*.log

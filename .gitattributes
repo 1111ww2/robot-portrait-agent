@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# 保留源码和运行包的原始换行，确保下载后可以复核文件哈希。
+vision_mvp/** -text
+tmp/** -text
+robot_programs/** -text
