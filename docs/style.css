@@ -172,22 +172,27 @@
 .record-details { margin-top:24px; }
 .record-details details { border-top:1px solid var(--line); }
 .record-details details:last-child { border-bottom:1px solid var(--line); }
-.record-details summary,.repo-modules summary { cursor:pointer; padding:12px 0; font-weight:650; }
+.record-details summary { cursor:pointer; padding:12px 0; font-weight:650; }
 .record-body { max-width:92ch; padding:0 0 16px; }
 .record-body p { margin:8px 0; line-height:1.75; }
 .record-body .verification li { display:grid; grid-template-columns:minmax(8em,auto) minmax(0,1fr); }
 .record-body .verification .source { grid-column:2; margin:0; }
 .repo .source { color:white; }
-.repo .source a { color:#c3d7ff; }
-.repo-modules { border-top:1px solid #64759175; }
-.repo-modules summary { color:white; }
+.repo .source a { display:inline-block; max-width:100%; padding:10px 14px; margin-top:6px; border-radius:4px; background:#355de2; color:white; }
+.repo .source a:hover { background:#294cc1; }
+.record-result { margin-top:20px; line-height:1.7; }
+.record-result strong { margin-right:.8em; }
+.record-details { margin-top:12px; }
+.record-body > section + section { border-top:1px solid var(--line); margin-top:20px; }
+.record-body h3 { font-size:1.05em; margin:16px 0 8px; }
+.agent-budget { margin:14px 0; }
 .acceptance .source a { white-space:normal; }
 .field-study .source a { font:13px/1.65 var(--mono); }
 #field-study,#tests { scroll-margin-top:var(--mast-height); }
 @media(max-width:700px){
   .field-columns .four { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .record-details { margin-top:16px; }
-  .record-details summary,.record-body,.repo-modules summary { font-size:14px; }
+  .record-details summary,.record-body { font-size:14px; }
   .record-body .verification li { display:block; }
   .record-body .verification .source { margin-top:7px; }
   .field-study .source a { font-size:12px; }
