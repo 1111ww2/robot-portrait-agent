@@ -227,25 +227,6 @@
 }
 /* 首屏之后的桌面字号和节奏。 */
 @media (min-width:701px) {
-  .field-study,.decision-feature,.film,.manual { font-size:15px; }
-  .bar .brand { font-size:19px; }
-  .bar nav a,.bar .author,.source,.engineering li p,.contract :is(dt,dd),.verification li,.toc a { font-size:13px; }
-  .field-study .eyebrow,.decision-feature .eyebrow,.film .eyebrow,.tiles figcaption,.player figcaption,
-  .field-study .source a,.source a,.scope b,.film-label>span,footer>.wrap { font-size:12px; }
-  .film-label>span b { font-size:13px; }
-  .manual-head>span,.film-quality,.scope,.folio,.toc>b,.engineering li::before { font-size:11px; }
-  .toc a span { font-size:10px; }
-  footer b { font-size:17px; }
-  .field-columns p,.decision-stages p,.feature-detail p,.acceptance,.player figcaption strong,.chapter table { font-size:14px; }
-  .field-columns p,.feature-detail p,.decision-feature header p { line-height:1.68; }
-  .restart-case p b { font-size:13px; }
-  .field-columns h3,.experiment-heading { font-size:19px; }
-  .decision-stages h3 { font-size:18px; }
-  .engineering h3,.chapter :is(h3,.system-subheading) { font-size:20px; }
-  .chapter .topic-title { font-size:23px; }
-  .chapter .system-heading { font-size:calc(clamp(23px,2vw,29px) - 1px); }
-  .chapter h2 { font-size:calc(clamp(27px,2.5vw,40px) - 1px); }
-  .field-study h2,.decision-feature header h2,.film-label h2,.manual-head h2 { font-size:calc(clamp(27px,2.55vw,36px) - 1px); }
   .field-study,.decision-feature,.film { padding-block:clamp(28px,3vw,42px); }
   .field-study h2,.film-label { margin-bottom:18px; }
   .field-timeline { gap:8px; margin:10px 0; }
@@ -288,14 +269,7 @@
   .field-study .field-timeline img { aspect-ratio:1; object-fit:cover; object-position:center top; }
   .field-timeline figure:nth-child(n+5) img { object-position:center 55%; }
 
-  /* 文档各章节共用同一字号层级，表格、参数和测试项与正文同级。 */
-  .manual { --doc-body:14px; --doc-caption:12px; font-size:var(--doc-body); }
-  .manual .chapter :is(p,table,dt,dd,li,code,.technical-aside) { font-size:var(--doc-body); }
-  .manual .chapter h2 { font-size:28px; line-height:1.3; }
-  .manual .chapter :is(h3,.topic-title) { font-size:20px; line-height:1.4; }
-  .manual .chapter .system-heading { font-size:22px; }
-  .manual .chapter h4 { font-size:17px; line-height:1.45; }
-  .manual :is(.folio,figcaption,.source,.source a,.manual-head>span) { font-size:var(--doc-caption); }
+
 }
 @media (min-width:961px) {
   /* 实测分为独立试拍、故障复核两段；图像与观察共用第一段。 */
@@ -328,7 +302,7 @@
   .field-study .record-result {
     grid-column:1/-1; display:flex; gap:14px; align-items:baseline;
     padding:10px 14px; margin-top:14px; background:var(--surface);
-    font-size:13px; line-height:1.65; color:var(--sub);
+    line-height:1.65; color:var(--sub);
   }
   .record-result strong { flex:none; margin:0; color:var(--ink); }
   /* 左栏标明技术问题，右栏沿一条阅读线组织决策与验收。 */
@@ -353,7 +327,7 @@
   }
   .decision-stages section { padding:12px 0; border:0; }
   .decision-stages section + section { border-top:1px solid var(--line); }
-  .decision-stages h3 { margin:0 0 4px; font-size:16px; }
+  .decision-stages h3 { margin:0 0 4px; }
   .decision-stages p { line-height:1.65; }
   .agent-budget { display:contents; }
   .agent-budget p { grid-area:3 / 1; margin:10px 0 14px; }
@@ -363,6 +337,37 @@
   }
   .decision-feature .acceptance b { display:block; margin-bottom:4px;
   }
+}
+
+/* 桌面端按信息层级共用字号，区块之间保持连续的阅读节奏。 */
+@media (min-width:701px) {
+  :root { --reading:14px; --intro-copy:13px; --caption:12px; }
+  .skip,.field-study,.decision-feature,.film,.manual,
+  .field-columns p,.field-study .record-result,.decision-feature header p,
+  .decision-stages p,.feature-detail p,.acceptance,.engineering li p,
+  .manual .chapter :is(p,table,dt,dd,li,code,.technical-aside) { font-size:var(--reading); }
+  .field-columns p,.decision-feature header p,.decision-stages p,.feature-detail p,
+  .engineering li p,.chapter p { line-height:1.75; }
+  .restart-case p b,.engineering li b,.player figcaption strong { font-size:var(--reading); }
+
+  .hero .dek,.product-status :is(b,span),.repo-desc,.bar nav a,.bar .author,.toc a {
+    font-size:var(--intro-copy);
+  }
+  .eyebrow,.tiles figcaption,.player figcaption,.film-quality,.film-quality select,
+  .film-label>span,.film-label>span b,.scope,.scope b,.folio,.toc>b,.toc a span,
+  .manual-head>span,.engineering li::before,footer>.wrap,.source,.source a,
+  .field-study .source a { font-size:var(--caption); }
+  .source a { line-height:1.6; }
+
+  .hero .objective { font-size:20px; }
+  .repo-title h2,.manual .chapter h2 { font-size:26px; }
+  .field-study h2,.decision-feature header h2,.film-label h2,.manual-head h2 {
+    font-size:30px; line-height:1.25;
+  }
+  .bar .brand,footer b,.field-columns h3,.experiment-heading,.engineering h3,
+  .manual .chapter :is(h3,.topic-title) { font-size:18px; line-height:1.4; }
+  .decision-stages h3,.manual .chapter h4 { font-size:16px; line-height:1.45; }
+  .manual .chapter h3.system-heading { font-size:20px; }
 }
 </style></head><body><a class="skip" href="#main">跳至正文</a>
 <header class="mast"><div class="wrap bar"><div class="brand"><img src="robot-portrait-43b4b140.svg" alt="" width="31" height="31"><span>Robot Portrait Agent</span></div><nav aria-label="章节导航"><a href="#film">项目演示</a><a href="#documentation">技术文档</a></nav><span class="author">邓羽希<small>（chloe）</small></span></div></header><main id="main"><section class="hero"><div class="wrap hero-layout">
